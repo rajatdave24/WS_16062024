@@ -1,6 +1,8 @@
 import React, {useState } from 'react';
 import Krishna from './Krishna';
+// import './bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
+
 export const App = () => {
   const [menu, setMenu] = useState(true);
 
@@ -60,6 +62,51 @@ export const App = () => {
                 
           </div>
 
+          <div className='donationBox'>
+
+          </div>
+
+          <div className="col-md-6 col-sm-6 col-xs-12" style={{float:'left',top:'50%',left:'50px'}}>
+              <div className="donationBox m-b bg-white">
+                  <div className="donationList">
+                    <div className="donationFlex ">
+                        <h4 className='title'>Donate 25 meals</h4>
+                        <h4 className='donateNow'>Donate Rs. 1,000</h4>
+                    </div>
+                    <div className="donationFlex ">
+                        <h4 className='title'>Donate 50 meals</h4>
+                        <h4 className='donateNow'>Donate Rs. 2,000</h4>
+                    </div>
+                    <div className="donationFlex ">
+                        <h4 className='title'>Donate 100 meals</h4>
+                        <h4 className='donateNow'>Donate Rs. 4,000</h4>
+                    </div>
+                    <div className="donationFlex ">
+                        <h4 className='title'>Donate 125 meals</h4>
+                        <h4 className='donateNow'>Donate Rs. 5,000</h4>
+                    </div>
+                    <div className="donationFlex ">
+                        <h4 className='title'>Donate 250 meals</h4>
+                        <h4 className='donateNow'>Donate Rs. 10,000</h4>
+                    </div>
+                    <div className="donationFlex ">
+                        <h4 className='title'>Donate 500 meals</h4>
+                        <h4 className='donateNow'>Donate Rs. 20,000</h4>
+                    </div>
+                    <div className="donationFlex" style={{borderBottom:'none'}}>
+                        <h4 className='title'>Donate 1000 meals</h4>
+                        <h4 className='donateNow'>Donate Rs. 40,000</h4>
+                    </div>
+
+                    <div className="donationFlex">
+                        <h4 className='title'>Donate 1000 meals</h4>
+                        <h4 className='donateNow'>Donate Rs. 40,000</h4>
+                    </div>
+                  </div>
+              </div>
+          </div>
+
+          {/* <div className='col-md-6' style={{position:'relative',display:'flex',top:'1900px'}}>Hare Krishna!</div> */}
           <p className='donationFooter'>To get the receipt of donation made through NEFT, RTGS, IMPS PayTm, UPI as mentioned above, please share your legal name, postal address with pincode (and PAN if you need 80G receipt) along with transaction details on  info@iskconfoodforchild.org <br/><br/>For more information please   Call |   Whatsapp:+91-6263756519  from Monday to Saturday between 9:00am to 6:00pm </p>
 </div>
   );
