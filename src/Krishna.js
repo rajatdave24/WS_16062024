@@ -5,3 +5,5 @@ const Krishna =()=> {
     <h3>Krishna!!!...</h3>
   );
 }
+
+export default Krishna;

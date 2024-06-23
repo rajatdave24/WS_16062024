@@ -1,5 +1,8 @@
 import React, {useState } from 'react';
 import Krishna from './Krishna';
+import Rama from './Rama';
+import {BrowserRouter, Routes, Route, Link, Switch} from 'react-router-dom';
+import NavBar from './NavBar';
 // import './bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
 
@@ -24,17 +27,25 @@ export const App = () => {
   
   return (
     <div className='app1'>
+{/*       
+            <Routes>
+                <Route path='/Krishna' element={<Krishna/>}></Route>
+                <Route path='/Rama' element={<Rama/>}></Route>
+            </Routes> */}
+            <NavBar/>
+      
       <div>
         <div className={(menu) ? 'menuContainerClicked' : 'menuContainer'}id="menuContainer">
         <img src="https://iskconmumbai.com/images/logo-black.png" alt="Logo" className="logo"/>
         <h3 className="logoText">ISKCON Food For Child</h3>
         <ul className={(menu && (window.innerWidth < 900)) ? 'menuListClicked' : 'menuList'} id="ul">
-            <li> <a href="#Krishna">Krishna</a></li>
-            <li><a href="#Rama">Rama</a></li>
+            <li> <a href='/Krishna'>Krishna</a></li>
+            {/* <li><a href="/Rama">Rama</a></li> */}
             <li><a href="#Govinda">Govinda</a></li>
             <li><a href="#Narasimha">Narasimha</a></li>
             <li><a href="#Varaha">Varaha</a></li>
             <li><a href="#Varaha">Varaha</a></li>
+            <Link to='/Rama'>Rama</Link>
        </ul>
           <div className={(menu) ? 'menuIconClicked' : 'menuIcon'} onClick = {() => { setMenu(prevState=> !prevState); console.log(menu, document.getElementById
             ('ul').className)}}>&#9776;</div >
@@ -105,9 +116,10 @@ export const App = () => {
                   </div>
               </div>
           </div>
+          
 
           {/* <div className='col-md-6' style={{position:'relative',display:'flex',top:'1900px'}}>Hare Krishna!</div> */}
-          <p className='donationFooter'>To get the receipt of donation made through NEFT, RTGS, IMPS PayTm, UPI as mentioned above, please share your legal name, postal address with pincode (and PAN if you need 80G receipt) along with transaction details on  info@iskconfoodforchild.org <br/><br/>For more information please   Call |   Whatsapp:+91-6263756519  from Monday to Saturday between 9:00am to 6:00pm </p>
+          <p className='donationFooter'><Link to='/Rama'>Rama</Link>To get the receipt of donation made through NEFT, RTGS, IMPS PayTm, UPI as mentioned above, please share your legal name, postal address with pincode (and PAN if you need 80G receipt) along with transaction details on  info@iskconfoodforchild.org <br/><br/>For more information please   Call |   Whatsapp:+91-6263756519  from Monday to Saturday between 9:00am to 6:00pm </p>
 </div>
   );
 }
