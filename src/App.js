@@ -3,7 +3,7 @@ import Krishna from './Krishna';
 import Rama from './Rama';
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
 import NavBar from './NavBar';
-
+import Test from './pages/Test';
 // import './bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
 import Footer from './Footer';
@@ -28,12 +28,14 @@ export const App = () => {
   // });
   
   return (
+   <div style={{position:'relative',display:'block'}}> 
     <div className='app1'>
-{/*       
+      
             <Routes>
                 <Route path='/Krishna' element={<Krishna/>}></Route>
                 <Route path='/Rama' element={<Rama/>}></Route>
-            </Routes> */}
+                <Route path='/Test' element={<Test/>}></Route>
+            </Routes>
             {/* <NavBar/> */}
       
       <div>
@@ -43,7 +45,7 @@ export const App = () => {
         <ul className={(menu) ? 'menuListClicked' : 'menuList'} id="ul">
 
         {/* (window.innerWidth < 900) */}
-            <li> <a href='/Krishna'>Krishna</a></li>
+            <li> <Link to='/Krishna'>Krishna</Link></li>
             {/* <li><a href="/Rama">Rama</a></li> */}
             <li><a href="#Govinda">Govinda</a></li>
             <li><a href="#Narasimha">Narasimha</a></li>
@@ -163,18 +165,39 @@ export const App = () => {
                     <img src='iskconpaytm.png' style={{position:'absolute',height:'29px',float:'left',top:'70px'}}/>
                     <span className='info'>7400056919</span>
                     <div><img src='copyIcon.png' style={{width:'40px',height:'28px',display:'inline',position:'absolute',top:'130px',let:'5px'}}/></div>
-                    <a className='cardDonateBtn' href="https://paytm.me/W-Vqkdv">Donate Now</a>
+                    <a className='cardDonateBtn' href="#paytmPage">Donate Now</a>
+                    <div><img style={{display:'block',position:'absolute',height:'80px',right: '10px', top:'100px'}} src="paytmQR.jpg" alt="paytmQR"/></div>
                 </div>
-                <div className='c1'>T3</div>
+                <div className='c1'>
+                    <h4 style={{position:'absolute',left:'5px',top: '-5px', left:'38px'}}>Donate through</h4>
+                    <img style={{position:'absolute',width:'138px',top:'45px', height:'24px',display:'inline',left:'30px'}} src="iskconupi.png" alt="support"></img>
+                    <span className="info" style={{top:'80px'}}>ISKCONMUMBAI@ICICI</span>
+                    <img src="copyicon.png" style={{width:'40px',height:'28px',display:'inline',position:'absolute',top:'105px',let:'5px'}} alt="support"></img>
+                    <span className="info" style={{width:'120px',fontSize:'12px',top:'150px'}}> Check your UPI limit with your bank. Max. Limit 1 lac per day</span>
+                    <img  style={{display:'block',position:'absolute',height:'80px',right: '5px', top:'100px'}} src="UPI_QR.jpg" alt="support"></img>
+                </div>
           </div>
       
 
+        <div style={{position:'absolute',left:'90px', top:'1900px'}}>
+            <h4>Receipts for your donation</h4>
+            <p style={{width:'62%'}}>80G available as per Income Tax Act 1961 and rules made there under.
+            Tax Exemption Certificate Ref. No.: AAATI0017PF20219</p>
+            <b style={{width:'90%'}}>To get the receipt of donation made through NEFT, RTGS, IMPS PayTm, UPI as mentioned above, please share your legal name, postal address with pincode (and PAN if you need 80G receipt) along with transaction details on  <a href="mailto:info@iskconfoodforchild.org">info@iskconfoodforchild.org</a> 
+            </b>
+
+        </div>
+
+        <div className='gallery'>
+            <h2 style={{borderBottom:'5px solid #551a8b',display:'inline-flex',left:'500px'}}>Gallery</h2>
+        </div>
 
           {/* <div className='col-md-6' style={{position:'relative',display:'flex',top:'1900px'}}>Hare Krishna!</div> */}
           <p className='donationFooter'>To get the receipt of donation made through NEFT, RTGS, IMPS PayTm, UPI as mentioned above, please share your legal name, postal address with pincode (and PAN if you need 80G receipt) along with transaction details on  info@iskconfoodforchild.org <br/><br/>For more information please   Call |   Whatsapp:+91-6263756519  from Monday to Saturday between 9:00am to 6:00pm </p>
 
         {/* <Footer style={{position:'absolute',display:'flex',top:'3000px'}}/> */}
 
+</div>
 </div>
   );
 }
