@@ -28,14 +28,16 @@ export const App = () => {
   // });
   
   return (
-   <div style={{position:'relative',display:'block'}}> 
+   <div style={{display:'block'}}> 
     <div className='app1'>
-      
+{/* 
             <Routes>
                 <Route path='/Krishna' element={<Krishna/>}></Route>
                 <Route path='/Rama' element={<Rama/>}></Route>
                 <Route path='/Test' element={<Test/>}></Route>
-            </Routes>
+                <Route path='/' element={<App/>}></Route>
+            </Routes> */}
+
             {/* <NavBar/> */}
       
       <div>
@@ -45,13 +47,13 @@ export const App = () => {
         <ul className={(menu) ? 'menuListClicked' : 'menuList'} id="ul">
 
         {/* (window.innerWidth < 900) */}
-            <li> <Link to='/Krishna'>Krishna</Link></li>
+            <li> <a href='/Krishna'>Krishna</a></li>
             {/* <li><a href="/Rama">Rama</a></li> */}
             <li><a href="#Govinda">Govinda</a></li>
             <li><a href="#Narasimha">Narasimha</a></li>
             <li><a href="#Varaha">Varaha</a></li>
             <li><a href="#Varaha">Varaha</a></li>
-            <Link to='/Rama'>Rama</Link>
+            {/* <Link to='/Rama'>Rama</Link> */}
        </ul>
           <div className={(menu) ? 'menuIconClicked' : 'menuIcon'} onClick = {() => { setMenu(prevState=> !prevState); console.log(menu, document.getElementById
             ('ul').className)}}>&#9776;</div >
@@ -59,7 +61,8 @@ export const App = () => {
         
     </div >
     <div  className='app'>
-        <img src="FFC-Banner-WEB-1_JPEG.jpg" className={(menu) ? 'image1': 'image'} alt="lotus"/>
+        {/* <img src="FFC-Banner-WEB-1_JPEG.jpg" className={(menu) ? 'image1': 'image'} alt="lotus"/> */}
+        <a href='#donateNow'>Donate Now</a>
     </div>
 
 {/* <p style={{display: 'flex',position: 'relative',paddingTop: '670px' }}>
@@ -79,7 +82,7 @@ export const App = () => {
                 
           </div>
 
-          <div className='donationContainer'>
+          <div className='donationContainer' id='donateNow'>
               <div className="donationBox">
                   <div className="donationList">
                     <div className="donationFlex ">
@@ -143,11 +146,11 @@ export const App = () => {
                 </div>
           </div>
 
-          <div className='inputCont'>
-                            <h2 style={{color:'#60349e'}}>Or, donation of your choice</h2>
-                            <div style={{display:'flex',justifyContent: 'space-between',alignItems: 'center', cursor:'pointer', position: 'relative',padding:'0 20px'}}>
-                                <span style={{left:'10px'}}>₹</span>
-                                <input className='donationInput' placeholder='Amount'/><h4><button style={{color:'white',backgroundColor:'#60349e',position:'absolute',top: '10px', right: '10px', borderRadius:'10px',height:'25px',boxShadow:'0px 4px 4px rgb(0 0 0 / 25%), inset 0px -4px 0px #451c7e'}}>Donate now</button></h4>
+                            <h2 style={{color:'#60349e',left:'10%',position: 'absolute',fontSize:'35px'}}>Or, donation of your choice</h2>
+                        <div className='inputCont'>    
+                            <div style={{display:'flex',justifyContent: 'space-between',alignItems: 'center', cursor:'pointer',padding:'0 20px',top:'30px'}}>
+                                <span style={{left:'10px',float:'left',fontWeight:'bolder',fontSize:'20px',position:'absolute',top:'40px'}}>₹</span>
+                                <input className='donationInput' placeholder='Amount'/><h4><button style={{color:'white',backgroundColor:'#60349e',position:'absolute',top: '38px', right: '10px', borderRadius:'20px',height:'35px',boxShadow:'0px 4px 4px rgb(0 0 0 / 25%), inset 0px -4px 0px #451c7e',fontSize:'20px'}}>Donate now</button></h4>
                             </div>
            </div>
 
@@ -171,7 +174,7 @@ export const App = () => {
                 <div className='c1'>
                     <h4 style={{position:'absolute',left:'5px',top: '-5px', left:'38px'}}>Donate through</h4>
                     <img style={{position:'absolute',width:'138px',top:'45px', height:'24px',display:'inline',left:'30px'}} src="iskconupi.png" alt="support"></img>
-                    <span className="info" style={{top:'80px'}}>ISKCONMUMBAI@ICICI</span>
+                    <span className="info" style={{top:'80px'}}>iskconfoodforchild@iob</span>
                     <img src="copyicon.png" style={{width:'40px',height:'28px',display:'inline',position:'absolute',top:'105px',let:'5px'}} alt="support"></img>
                     <span className="info" style={{width:'120px',fontSize:'12px',top:'150px'}}> Check your UPI limit with your bank. Max. Limit 1 lac per day</span>
                     <img  style={{display:'block',position:'absolute',height:'80px',right: '5px', top:'100px'}} src="UPI_QR.jpg" alt="support"></img>
@@ -179,17 +182,18 @@ export const App = () => {
           </div>
       
 
-        <div style={{position:'absolute',left:'90px', top:'1900px'}}>
-            <h4>Receipts for your donation</h4>
-            <p style={{width:'62%'}}>80G available as per Income Tax Act 1961 and rules made there under.
+        <div style={{position:'relative',left:'10%', marginTop: '30px'}}>
+            <h2>Receipts for your donation</h2>
+            <p style={{width:'62%',fontSize:'18px'}}>80G available as per Income Tax Act 1961 and rules made there under.
             Tax Exemption Certificate Ref. No.: AAATI0017PF20219</p>
-            <b style={{width:'90%'}}>To get the receipt of donation made through NEFT, RTGS, IMPS PayTm, UPI as mentioned above, please share your legal name, postal address with pincode (and PAN if you need 80G receipt) along with transaction details on  <a href="mailto:info@iskconfoodforchild.org">info@iskconfoodforchild.org</a> 
+            <b style={{width:'90%',fontSize:'18px'}}>To get the receipt of donation made through NEFT, RTGS, IMPS PayTm, UPI as mentioned above, please share your legal name, postal address with pincode (and PAN if you need 80G receipt) along with transaction details on  <a href="mailto:info@iskconfoodforchild.org">info@iskconfoodforchild.org</a> 
             </b>
 
         </div>
 
         <div className='gallery'>
-            <h2 style={{borderBottom:'5px solid #551a8b',display:'inline-flex',left:'500px'}}>Gallery</h2>
+            <h2 style={{borderBottom:'5px solid #551a8b',display:'inline-flex',position:'absolute'}}>Gallery</h2>
+            <p>Hare Krishna!!!</p>
         </div>
 
           {/* <div className='col-md-6' style={{position:'relative',display:'flex',top:'1900px'}}>Hare Krishna!</div> */}
