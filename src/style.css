@@ -8,9 +8,9 @@ p {
 box-sizing: border-box;
 } */
 
-
 body {
 margin: 0;
+margin-right: 0px !important;
 font-family: system-ui, sans-serif; color: black;
 background-color: white;
 }
@@ -21,7 +21,7 @@ font-size: 1.5rem;
 }
 
 .app{
-  margin-top: 80px;
+  margin-top: 56px;
   background-image: url(../public/FFC-Banner-WEB-1.avif);
   background-size: cover;
   width: 100vw;
@@ -35,7 +35,7 @@ font-size: 1.5rem;
 display: block;
 position: fixed;
 height: 80px;
-width: 100%;
+width: 100vw;
 top: 0px;
 left: 0px;
 border: 1px solid black;
@@ -87,6 +87,7 @@ background-color: rgb(224, 222, 222);
     font-size: 18px;
     line-height: 20px;
     font-family: 'Times New Roman', Times, serif;
+    color: black;
   }
 
   .menulist li {
@@ -140,9 +141,10 @@ z-index: 0;
 .board{
   display: inline-flex;
   position: relative;
-  height: 350px;
+  height: auto;
   width: 80%;
   left: 10%;
+  padding-top: 80px;
   /* top: 540px; */
   justify-content: center;
   justify-self: center;
@@ -154,6 +156,7 @@ z-index: 0;
 
 .contentTitle{
   position: absolute;
+  top: -10px;
   font-size: 30px;
   border-bottom: 5px solid #551a8b;
 }
@@ -192,7 +195,7 @@ z-index: 0;
   display: flex;
   flex-direction: column;
   height: 50%;
-  width: 150px;
+  width: 170px;
   /* border: 1px solid green; */
   border-radius: 10px;
   top: -10px;
@@ -213,7 +216,7 @@ z-index: 0;
   justify-content: center;
   font-size: 15px;
   text-align: center;
-  left: 10%;
+  left: 5%;
 }
 
 .app1{
@@ -245,6 +248,7 @@ z-index: 0;
   width: 380px;
   height:fit-content;
   justify-self: left;
+
   border: 2px solid #60349e;
 }
 
@@ -352,7 +356,7 @@ z-index: 0;
   margin-top: 50px;
   border: 1px solid black;
   width: 80%;
-  height: 240px;
+  height: auto;
   left: 10%;
   justify-content: space-between;
   align-items: center;
@@ -367,6 +371,7 @@ z-index: 0;
   height: 210px;
   border-radius: 10px;
   padding: 10px;
+  gap: 20px;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.12), 0px 0px 1px rgba(0, 0, 0, 0.34);
 }
 
@@ -427,14 +432,57 @@ z-index: 0;
 
   .gallery{
     justify-content: center;
-    display: inline-flex;
+    display: flex;
     position: relative;
     margin-top: 20px;
     border: 1px solid black;
     width: 80%;
-    height: 20%;
+    height: auto;
     left: 10%;
+    overflow: hidden;
   }
+
+.galleryContainer{
+  display: flex;
+  position: relative;
+  width: 61.6vw;
+  height: calc(100vh - 80px);
+  border: 1px solid green;
+  justify-self: center;
+  left: 5%;
+  margin-top: 100px;
+
+  display: inherit;
+  /* transform: translate3d(-100%, 0px, 0px);
+  transition: all 1000ms ease-out 0s; */
+  animation: gallery 1s ease-out 0s infinite linear;
+  overflow:hidden ;
+}
+
+
+
+@keyframes gallery {
+  0%{
+    transform: translate3d(0px, 0px, 0px);
+
+  }
+  25%{
+    transform: translate3d(-100%, 0px, 0px);
+
+  }
+  50%{
+    transform: translate3d(-200%, 0px, 0px);
+
+  }
+  75%{
+    transform: translate3d(-300%, 0px, 0px);
+
+  }
+  100%{
+    transform: translate3d(-400%, 0px, 0px);
+    transition-delay: 3s;
+  }
+}
 
 @keyframes test1{
   0%{
@@ -445,7 +493,7 @@ z-index: 0;
    }
   }
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 750px) {
   .menuList{
   display: none;
   opacity: 0;
@@ -515,7 +563,7 @@ z-index: 0;
   position: fixed;
   top: 0px;
   height: 80px;
-  width: 100%;
+  width: 100vw;
   left: 0px;
   right: 0px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
@@ -621,7 +669,9 @@ z-index: 0;
 }
 
 .donationContainer{
-  display:block;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
   /* transition: 0.3s ease; */
 }
 
@@ -631,11 +681,29 @@ z-index: 0;
 }
 
 .cardContainer{
+  display: flex;
+  flex-direction: column;
   position: relative;
-  display: inline-block;
-  gap: 20px;
+  gap: 30px;
   transition: 5s ease;
 }
+
+.facts{
+  position: relative;
+  flex-direction: column;
+  height:auto;
+  justify-content: center;
+}
+
+.facts1{
+  justify-content: center;
+  left: 30%;
+}
+
+.donationBox{
+  left: 25%;
+}
+
 
 @keyframes test {
   0% {
@@ -651,3 +719,7 @@ z-index: 0;
 }
 
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
