@@ -35,12 +35,14 @@
     -moz-transition: 0.05s ease;
     -ms-transition: 0.05s ease;
     transition: 0.05s ease;
-    border-left: 3px solid #fff;
+    /* border-left: 3px solid #60349e; */
     display: block;
     text-decoration: none;
     font-size: large;
     font-weight: bolder;
   }
+
+
   
   .i1 ul div{
     display: flex;

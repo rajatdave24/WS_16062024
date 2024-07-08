@@ -10,6 +10,8 @@ import Test from './pages/Test';
 // import './bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
 import Footer from './Footer';
+import { Gallery } from './Gallery';
+import { Testimonials } from './testimonials';
 
     const MenuContext = createContext();
 
@@ -174,7 +176,7 @@ export const FFC = () => {
           </div>
       
 
-        <div style={{position:'relative',left:'10%', marginTop: '30px'}}>
+        <div style={{position:'relative',left:'10%', marginTop: '30px', width:'80vw'}}>
             <h2>Receipts for your donation</h2>
             <p style={{width:'62%',fontSize:'18px'}}>80G available as per Income Tax Act 1961 and rules made there under.
             Tax Exemption Certificate Ref. No.: AAATI0017PF20219</p>
@@ -183,7 +185,10 @@ export const FFC = () => {
 
         </div>
 
-        <div className='gallery'>
+        <Gallery/>
+        <Testimonials/>
+
+        {/* <div className='gallery'>
             <h2 style={{borderBottom:'5px solid #551a8b',display:'inline-flex',position:'absolute'}}>Gallery</h2>
             <div className='galleryContainer'>
                 <img src='pic1.jpg' style={{objectFit:'fill'}}/>
@@ -192,7 +197,7 @@ export const FFC = () => {
                 <img src='pic4.jpg' style={{objectFit:'contain'}}/>
             </div>
             <p>Hare Krishna!!!</p>
-        </div>
+        </div> */}
 
           {/* <div className='col-md-6' style={{position:'relative',display:'flex',top:'1900px'}}>Hare Krishna!</div> */}
           <p className='donationFooter'>To get the receipt of donation made through NEFT, RTGS, IMPS PayTm, UPI as mentioned above, please share your legal name, postal address with pincode (and PAN if you need 80G receipt) along with transaction details on  info@iskconfoodforchild.org <br/><br/>For more information please   Call |   Whatsapp:+91-6263756519  from Monday to Saturday between 9:00am to 6:00pm </p>
