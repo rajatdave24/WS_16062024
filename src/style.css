@@ -8,11 +8,15 @@ p {
 box-sizing: border-box;
 } */
 
-body {
+html,body {
 margin: 0;
 margin-right: 0px !important;
+width: 100vw;
 font-family: system-ui, sans-serif; color: black;
 background-color: white;
+overflow-x: hidden;
+scroll-behavior: smooth;
+transition-duration: 0.3s;
 }
 
 h1 {
@@ -21,12 +25,16 @@ font-size: 1.5rem;
 }
 
 .app{
-  margin-top: 56px;
-  background-image: url(../public/FFC-Banner-WEB-1.avif);
+  display: flex;
+  position: relative;
+  margin-top: 78px;
+  background-image: url(../public/FFC-Banner-WEB-1_11zon.jpeg);
   background-size: cover;
+  background-size: 1370px 641px;
+  background-repeat: no-repeat;
   width: 100vw;
-  height: 100vh;
-  background-position: 55%;
+  height: 90vh;
+  background-position: 50%;
 
 
 }
@@ -49,7 +57,7 @@ z-index: 100;
 display: flex;
 position: relative;
 top: 10px;
-gap: 20px;
+gap: 25px;
 float: right;
 padding-right: 20px;
 }
@@ -94,15 +102,15 @@ background-color: rgb(224, 222, 222);
   display: flex;
   position: relative;
   height: 100%;
-  width: 100%;
-  gap: 0px;
+  width: auto;
+  gap: 10px;
   }
 
   .menulist li > a {
     display: flex;
     position: relative;
     height: 40px;
-    width: 20%;
+    width: auto;
     cursor: pointer;
     list-style: none;
     text-decoration: none;
@@ -122,15 +130,12 @@ background-color: rgb(224, 222, 222);
   }
 
 .image{
-position: absolute;
+position: relative;
 display: flex;
-margin-top: 0px;
+margin-top: 81px;
 height: 65vh;
 /* width: 1250px; */
 width: 100%;
-right: -20px;
-left: -16px;
-top: 81px;
 background-size: cover;
 background-position: 100%;
 /* border: 1px solid black; */
@@ -142,7 +147,7 @@ z-index: 0;
   display: inline-flex;
   position: relative;
   height: auto;
-  width: 80%;
+  width: 80vw;
   left: 10%;
   padding-top: 80px;
   /* top: 540px; */
@@ -169,7 +174,8 @@ z-index: 0;
   white-space: pre-wrap;
   padding-left: 20px;
   padding-right: 20px;
-  font-size: 20px;
+  font-size: 22px;
+  font-family: 'Times New Roman', Times, serif;
   /* color: rgba(47, 52, 63, 0.56); */
   color: black;
  
@@ -181,7 +187,7 @@ z-index: 0;
   flex-direction: row;
   justify-content: space-between;
   border: 1px solid black;
-  margin-top: 20px;
+  margin-top: 80px;
   width: 80%;
   left: 10%;
   gap: 20px;
@@ -194,7 +200,7 @@ z-index: 0;
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 50%;
+  height: 75%;
   width: 170px;
   /* border: 1px solid green; */
   border-radius: 10px;
@@ -231,7 +237,7 @@ z-index: 0;
   top: 1100px;
   width: 100vw;
   gap: 25px;
-  margin-top: 20px;;
+  margin-top: 100px;
   justify-content: center;
   border: 1px solid black;
   background-color: yellow;
@@ -262,7 +268,7 @@ z-index: 0;
   align-items: center;
   cursor: pointer;
   position: relative;
-  width: 340px;
+  width: auto;
   height: 51px;
   padding: 0 20px;
   border-bottom: 1px solid #ddd;
@@ -294,8 +300,8 @@ z-index: 0;
 }
 
 .donateNow{
-  min-width: 145px;
-  height: 18px;
+  min-width: 178px;
+  height: 36px;
   padding: 7px 16px;
   margin: 6px 0 !important;
   font-family: "Lato";
@@ -343,7 +349,7 @@ z-index: 0;
   justify-self: center;
   width: 80%;
   height: 100px;
-  margin-top: 80px;
+  margin-top: 10px;
   left: 10%;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.12), 0px 0px 1px rgba(0, 0, 0, 0.34);
   border-radius: 8px;
@@ -354,33 +360,35 @@ z-index: 0;
   position: relative;
   display:flex;
   margin-top: 50px;
-  border: 1px solid black;
+  margin-bottom: 130px;
+  /* border: 1px solid black; */
   width: 80%;
   height: auto;
   left: 10%;
   justify-content: space-between;
-  align-items: center;
+  align-items: top;
 }
 
 .c1{
   position: relative;
   display: block;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   align-items:center;
-  width: 180px;
-  height: 210px;
+  width: 266px;
+  min-height: 210px;
   border-radius: 10px;
-  padding: 10px;
+  padding: 20px;
   gap: 20px;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.12), 0px 0px 1px rgba(0, 0, 0, 0.34);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.12), 0px 0px 10px rgba(0, 0, 0, 0.34);
+ -webkit-box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.12), 0px 0px 1px rgba(0, 0, 0, 0.34)
 }
 
 .c1:hover{
-  box-shadow: 5px 8px 5px rgba(0.12, 0, 0, 0.12), 0px 0px 6px rgba(0, 0, 0, 0.34);
+  box-shadow: 0px 5px 15px rgba(0.12, 0, 0, 0.12), 0px 5px 6px rgba(0, 0, 0, 0.34);
 }
 
 .cardContainer span{
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .cardContainer p{
@@ -436,8 +444,8 @@ z-index: 0;
     position: relative;
     margin-top: 20px;
     border: 1px solid black;
-    width: 80%;
-    height: auto;
+    width: 80vw;
+    height: 80vh;
     left: 10%;
     overflow: hidden;
   }
@@ -449,9 +457,8 @@ z-index: 0;
   height: calc(100vh - 80px);
   border: 1px solid green;
   justify-self: center;
-  left: 5%;
+  left: 6.5%;
   margin-top: 100px;
-
   display: inherit;
   /* transform: translate3d(-100%, 0px, 0px);
   transition: all 1000ms ease-out 0s; */
@@ -459,6 +466,45 @@ z-index: 0;
   overflow:hidden ;
 }
 
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #32ca38;
+  font-weight: bolder;
+}
+
+.galleryNews{
+  display: flex;
+  position: relative;
+  width: 95vw;
+  height: 36vh;
+  /* border: 1px solid black; */
+  justify-content: space-evenly;
+  padding-bottom: 50px;
+  margin-top: 30px;
+
+}
+
+.galleryNews img{
+  width: 30%;
+  height: 100%;
+  border: 2px solid yellow;
+}
+
+.videoContainer{
+  display: flex;
+  position: relative;
+  height: 50vh;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  width: 80vw;
+
+}
 
 
 @keyframes gallery {
@@ -493,7 +539,7 @@ z-index: 0;
    }
   }
 
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: 820px) {
   .menuList{
   display: none;
   opacity: 0;
@@ -625,12 +671,12 @@ color: black;
 .menuListClicked li, .menuList li {
   position: relative;
   width: 220px;
-  height: 40px;
+  height: 45px;
   justify-content: center !important;
   text-align: left;
   padding-left: 0px;
-  padding-top: 20px;
-  left: -30px;
+  padding-top: 12px;
+  left: -10px;
   font-size: large;
   font-weight: bolder;
   align-items: center !important;
@@ -639,15 +685,14 @@ color: black;
 
 .image1{
 margin-right: 90px;
-position: absolute;
+position: relative;
 display: flex;
-margin-top: 0px;
+margin-top: 81px;
 /* width: 1250px; */
 width: 915px;
 height: 100%;
 right: -20px;
 left: -16px;
-top: 81px;
 border: 1px solid black;
 /* transition: 0.3s ease; */
 z-index: 0;
@@ -655,8 +700,8 @@ z-index: 0;
 
 .app{
   display: flex;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 }
 
 .sticky{
@@ -683,6 +728,7 @@ z-index: 0;
 .cardContainer{
   display: flex;
   flex-direction: column;
+  align-items: center;
   position: relative;
   gap: 30px;
   transition: 5s ease;
@@ -690,6 +736,7 @@ z-index: 0;
 
 .facts{
   position: relative;
+  display: inline-flex;
   flex-direction: column;
   height:auto;
   justify-content: center;
@@ -697,12 +744,32 @@ z-index: 0;
 
 .facts1{
   justify-content: center;
-  left: 30%;
+  left: 36%;
 }
 
 .donationBox{
   left: 25%;
 }
+
+.galleryNews{
+  border: 1px solid black;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: auto;
+}
+
+.videoContainer{
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  justify-content: center;
+  gap: 30px;
+}
+
 
 
 @keyframes test {
@@ -723,3 +790,19 @@ z-index: 0;
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5){
+
+  html,
+  body{
+    width:100%;
+    height:100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x:hidden;
+  }
+}

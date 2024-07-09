@@ -1,12 +1,14 @@
 import React, {useState, useRef, createContext } from 'react';
-import Krishna from './Krishna';
-import Rama from './Rama';
-import Govinda from './Govinda';
-import Narasimha from './Narasimha';
-import Varaha from './Varaha';
+import Krishna from './pages/About';
+import AnnaDan from './pages/AnnaDan';
+import Govinda from './pages/Govinda';
+import Narasimha from './pages/Narasimha';
+import Varaha from './pages/Varaha';
+import About from './pages/About';
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
 import NavBar from './NavBar';
 import Test from './pages/Test';
+import Video from './Video';
 // import './bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
 import Footer from './Footer';
@@ -41,13 +43,12 @@ export const FFC = () => {
         <ul className={(menu) ? 'menuListClicked' : 'menuList'} id="ul">
 
         {/* (window.innerWidth < 900) */}
-            <li> <a href='/Krishna'>About</a></li>
+            <li><a href='/'>Home</a></li>
+            <li><a href='/About'>About</a></li>
             {/* <li><a href="/Rama">Rama</a></li> */}
-            <li><a href="/Govinda">Govinda</a></li>
+            <li><a href="/AnnaDan">Anna Daan</a></li>
             <li><a href="/Narasimha">Narasimha</a></li>
             <li><a href="/Varaha">Varaha</a></li>
-            <li><a href="/Varaha">Varaha</a></li>
-            <Link to='/Rama'>Rama</Link>
        </ul>
           <div className={(menu) ? 'menuIconClicked' : 'menuIcon'} onClick = {() => { setMenu(prevState=> !prevState); console.log(menu, document.getElementById
             ('ul').className)}}>&#9776;</div >
@@ -140,7 +141,7 @@ export const FFC = () => {
                 </div>
           </div>
 
-                            <h2 style={{color:'#60349e',left:'10%',position: 'absolute',fontSize:'35px'}}>Or, donation of your choice</h2>
+                            <h2 style={{color:'#60349e',left:'10%',position: 'relative',fontSize:'35px',marginBottom:'20px'}}>Or, donation of your choice</h2>
                         <div className='inputCont'>    
                             <div style={{display:'flex',justifyContent: 'space-between',alignItems: 'center', cursor:'pointer',padding:'0 20px',top:'30px'}}>
                                 <span style={{left:'10px',float:'left',fontWeight:'bolder',fontSize:'20px',position:'absolute',top:'40px'}}>₹</span>
@@ -148,8 +149,10 @@ export const FFC = () => {
                             </div>
            </div>
 
+           <h6 style={{color:'#60349e',left:'10%',position: 'relative',fontSize:'35px'}}>Donate via NEFT/RTGS/IMPS/PayTm/UPI</h6>
+
           <div className='cardContainer'>     
-                <div className='c1'>
+                <div className='c1' style={{height:'210px'}}>
                     <h4 style={{position:'absolute',left:'5px',top: '-5px'}}>Donate via NEFT / RTGS</h4>
                     <div><img src='copyIcon.png' style={{width:'40px',height:'28px',display:'inline',position:'absolute',top:'30px',right:'5px'}}/></div>
                     <p><span>Bank Name: </span>Indian Overseas Bank(IOB)</p>
@@ -157,7 +160,7 @@ export const FFC = () => {
                     <p><span>Account No: </span>124501000022099</p>
                     <p><span>IFSC Code: </span>IOBA0001245</p>
                 </div>
-                <div className='c1'>
+                <div className='c1' style={{height:'230px'}}>
                     <h4 style={{position:'absolute',left:'10px',top: '-5px'}}>Donate using Mobile Number</h4>
                     <img src='iskconpaytm.png' style={{position:'absolute',height:'29px',float:'left',top:'70px'}}/>
                     <span className='info' ref={inforef}>7400056919</span>
@@ -165,7 +168,7 @@ export const FFC = () => {
                     <a className='cardDonateBtn' href="#paytmPage">Donate Now</a>
                     <div><img style={{display:'block',position:'absolute',height:'80px',right: '10px', top:'100px'}} src="paytmQR.jpg" alt="paytmQR"/></div>
                 </div>
-                <div className='c1'>
+                <div className='c1' style={{height:'210px'}}>
                     <h4 style={{position:'absolute',left:'5px',top: '-5px', left:'38px'}}>Donate through</h4>
                     <img style={{position:'absolute',width:'138px',top:'45px', height:'24px',display:'inline',left:'30px'}} src="iskconupi.png" alt="support"></img>
                     <span className="info" style={{top:'80px'}}>iskconfoodforchild@iob</span>
@@ -176,16 +179,34 @@ export const FFC = () => {
           </div>
       
 
-        <div style={{position:'relative',left:'10%', marginTop: '30px', width:'80vw'}}>
+        <div style={{display:'block',position:'relative',left:'10%', marginTop: '30px', width:'80vw'}}>
             <h2>Receipts for your donation</h2>
             <p style={{width:'62%',fontSize:'18px'}}>80G available as per Income Tax Act 1961 and rules made there under.
             Tax Exemption Certificate Ref. No.: AAATI0017PF20219</p>
             <b style={{width:'90%',fontSize:'18px'}}>To get the receipt of donation made through NEFT, RTGS, IMPS PayTm, UPI as mentioned above, please share your legal name, postal address with pincode (and PAN if you need 80G receipt) along with transaction details on  <a href="mailto:info@iskconfoodforchild.org">info@iskconfoodforchild.org</a> 
             </b>
+            <p><strong>For more information please Call | <a href="https://wa.me/919967591425"><i class="fa fa-whatsapp text-green font-bold">&nbsp;Whatsapp</i></a> : +91-6263756519 from Monday to Saturday between 9:00am to 6:00pm</strong></p>
 
         </div>
 
         <Gallery/>
+
+        <div>
+            <h5 style={{display:'inline-flex',color:'#60349e',left:'35%',position: 'relative',fontSize:'35px',paddingTop:'50px',borderBottom:'5px solid black'}}>ISKCON in the News</h5>
+            <div className='galleryNews'>
+                <img src='iskcon-meals-in-Hindustan-Times.jpg'/>
+                <img src='food-distribution-in-Chandigarh.jpg'/>
+                <img src='iskcon-meals-in-New-Indian-Express.jpg'/>
+            </div>
+        </div>
+
+        <div className="videoContainer">
+            
+            <Video src={'https://www.youtube.com/embed/AzS_BqFefGQ'}/>
+            <Video src={'https://www.youtube.com/embed/AzS_BqFefGQ'}/>
+
+        </div>
+
         <Testimonials/>
 
         {/* <div className='gallery'>
@@ -200,7 +221,7 @@ export const FFC = () => {
         </div> */}
 
           {/* <div className='col-md-6' style={{position:'relative',display:'flex',top:'1900px'}}>Hare Krishna!</div> */}
-          <p className='donationFooter'>To get the receipt of donation made through NEFT, RTGS, IMPS PayTm, UPI as mentioned above, please share your legal name, postal address with pincode (and PAN if you need 80G receipt) along with transaction details on  info@iskconfoodforchild.org <br/><br/>For more information please   Call |   Whatsapp:+91-6263756519  from Monday to Saturday between 9:00am to 6:00pm </p>
+          {/* <p className='donationFooter'>To get the receipt of donation made through NEFT, RTGS, IMPS PayTm, UPI as mentioned above, please share your legal name, postal address with pincode (and PAN if you need 80G receipt) along with transaction details on  info@iskconfoodforchild.org <br/><br/>For more information please   Call |   Whatsapp:+91-6263756519  from Monday to Saturday between 9:00am to 6:00pm </p> */}
 
         {/* <Footer style={{position:'absolute',display:'flex',top:'3000px'}}/> */}
 

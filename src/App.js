@@ -1,9 +1,10 @@
 import React, {useState, useRef } from 'react';
-import Krishna from './Krishna';
-import Rama from './Rama';
-import Govinda from './Govinda';
-import Narasimha from './Narasimha';
-import Varaha from './Varaha';
+import Krishna from './pages/About';
+import AnnaDan from './pages/AnnaDan';
+import Govinda from './pages/Govinda';
+import Narasimha from './pages/Narasimha';
+import Varaha from './pages/Varaha';
+import About from './pages/About';
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
 import NavBar from './NavBar';
 import FFC from './FFC';
@@ -16,8 +17,8 @@ export const App = () => {
 return(
 <>
     <Routes>
-        <Route path='/Krishna' element={<Krishna/>}></Route>
-        <Route path='/Rama' element={<Rama/>}></Route>
+        <Route path='/About' element={<About/>}></Route>
+        <Route path='/AnnaDan' element={<AnnaDan/>}></Route>
         <Route path='/Govinda' element={<Govinda/>}></Route>
         <Route path='/Narasimha' element={<Narasimha/>}></Route>
         <Route path='/Varaha' element={<Varaha/>}></Route>

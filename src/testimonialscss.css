@@ -1,5 +1,5 @@
 #testimonials {
-    padding: 100px 0;
+    padding: 80px 0;
     background: white;
     display: flex;
     flex-direction: column;
@@ -43,6 +43,7 @@
   .testimonial-content {
     position: relative;
     overflow: hidden;
+    flex-wrap: wrap;
   }
   .testimonial-content p {
     margin-bottom: 0;
@@ -54,4 +55,8 @@
     font-size: 15px;
     font-weight: 600;
     color: #666;
+  }
+
+  .row{
+    flex-direction: column;
   }
