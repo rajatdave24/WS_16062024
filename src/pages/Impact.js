@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import NavBar from '../NavBar';
 
-const Varaha =()=> {
+const Impact =()=> {
 
   const [menu, setMenu] = useState(false);
 
@@ -12,4 +12,5 @@ const Varaha =()=> {
   );
 }
 
-export default Varaha;
+export default Impact;
+

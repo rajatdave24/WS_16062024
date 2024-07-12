@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import NavBar from '../NavBar';
 
-const Narasimha =()=> {
+const Contact =()=> {
 
   const [menu, setMenu] = useState(false);
 
@@ -12,4 +12,4 @@ const Narasimha =()=> {
   );
 }
 
-export default Narasimha;
+export default Contact;

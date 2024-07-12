@@ -27,10 +27,10 @@ export const Testimonials = () => {
   ]
 
   return (
-    <div id="testimonials">
+    <div id="testimonials" style={{textAlign:'center'}}>
+      <h2 style={{display:'inline-flex',color:'#60349e',position: 'relative',fontSize:'35px',borderBottom:'5px solid black',textAlign:'centre'}}>TESTIMONIALS</h2>
       <div className="container">
-        <div className="section-title text-center">
-        <h2 style={{display:'inline-flex',color:'#60349e',left:'38%',position: 'relative',transform:'uppp',fontSize:'35px',paddingTop:'50px',borderBottom:'5px solid black',marginBottom:'60px' }}>TESTIMONIALS</h2>
+        <div className="section-title text-center" style={{justifyContent:'top',alignItems:'top',display:'flex',position:'relative'}}>
         </div>
         <div className="row" style={{flexWrap:'nowrap'}}>
           {data

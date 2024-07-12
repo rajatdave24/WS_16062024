@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import NavBar from '../NavBar';
 
-const Govinda =()=> {
+const Donate =()=> {
 
   const [menu, setMenu] = useState(false);
 
@@ -12,5 +12,4 @@ const Govinda =()=> {
   );
 }
 
-export default Govinda;
-
+export default Donate;

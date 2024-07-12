@@ -1,87 +1,52 @@
-// import React from "react";
-import { BiSolidMessage } from "react-icons/bi";
-import { FaFacebook , FaTwitter , FaInstagram , FaYoutube} from "react-icons/fa";
-import footerStyle from './footerStyle.css';
+import React from "react";
+import "./Footer.css";
+import { FaFacebook } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
 
-const Footer = () => {
+
+function Footer() {
   return (
-  <>
-    <footer className="flex justify-center">
-      <div className="row flex align-center">
-        <div className="col">
-          <h3>Founder Acharya</h3>
-          <img
-            src="https://iskconmumbai.com/images/author-iskcon.jpg"
-            className="logo1"
-          ></img>
-          <p>His Divine Grace</p>
-          <p>A.C Bhaktivedanta Swami Prabhupada</p>
+    <footer>
+           <div class="container">
+            <div class="footer-content">
+                <h3>Contact Us</h3>
+                <p>Email:pranav@iskconmumbai.com</p>
+                <p>Phone: +91</p>
+                <p>Address: Address </p>
+            </div>
+            <div class="footer-content">
+                <h3>Quick Links</h3>
+                 <ul class="list">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Products</a></li>
+                    <li><a href="">Contact</a></li>
+                 </ul>
+            </div>
+            <div class="footer-content">
+                <h3>Follow Us</h3>
+                <ul class="social-icons">
+                 <li><a href=""><FaFacebook /></a></li>
+                 <li><a href=""><FaTwitter /></a></li>
+                 <li><a href=""><FaInstagram /></a></li>
+                 <li><a href=""><FaYoutube /></a></li>
+              
+                </ul>
+                </div>
         </div>
-
-        <div className="col">
-          <h3>Registered Head Office</h3>
-          <p>ISKCON Juhu</p>
-          <p>Hare Krishna Land, Juhu, Mumbai-400049, India</p>
-          <p>Registered under Maharashtra Public Trust Act 1950</p>
+      <div class="bottom-bar">
+        <div>
+          <p>Registered under Maharastra Public Trust act 1950 vide Registration No. F-2179(Bom)</p>
+          <p>International Society For Krishna Consiousness (ISKCON) | Funder-Acharya: H.D.G. A.C. Bhaktivedanta Swami Prabhupada</p>
         </div>
-
-        <div className="col">
-          <h3>Links</h3>
-          <ul>
-            <li>
-              <a href="">Home</a>
-            </li>
-            <li>
-              <a href="">Services</a>
-            </li>
-            <li>
-              <a href="">About</a>
-            </li>
-            <li>
-              <a href="">Donations</a>
-            </li>
-          </ul>
+            <p>  &copy;{new Date().getFullYear()} ISKCON Food For Child | All rights reserved |
+            Terms Of Service | Privacy</p>
         </div>
-
-        <div className="col ">
-          <h3>Contact Us</h3>
-          <form>
-            <div className=" icon "><BiSolidMessage /></div>
-            <input
-              type="email"
-              placeholder="Enter your email id"
-              required
-            ></input>
-            <button type="submit">Submit</button>
-          </form>
- 
-          <div className="social-icons">
-            <ul>
-                <li> <FaFacebook /></li>
-                <li>  <FaTwitter /></li>
-                <li> <FaInstagram /></li>
-                <li>  <FaYoutube /></li>
-           
-           </ul>
-            
-           
-          </div>  
-
-
-        </div>
-
-    <p style={{position:'relative',width:'100vw',top:'30px',textAlign:'center'}}>
-        <hr />
-       <p className="text-center">&copy; {new Date().getFullYear()} ISKCON Juhu . All rights reserved.</p>
-    </p>
-
-
-
-      </div>
     </footer>
-
-</>
   );
-};
+}
 
 export default Footer;

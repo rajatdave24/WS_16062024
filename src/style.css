@@ -486,6 +486,8 @@ z-index: 0;
   justify-content: space-evenly;
   padding-bottom: 50px;
   margin-top: 30px;
+  left: 3.5%;
+  
 
 }
 
@@ -503,8 +505,9 @@ z-index: 0;
   justify-content: center;
   gap: 80px;
   width: 80vw;
-
 }
+
+
 
 
 @keyframes gallery {

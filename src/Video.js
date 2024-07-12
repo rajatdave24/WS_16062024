@@ -16,7 +16,7 @@ const Video =({src}) => {
         height="60%"
         width='35%'
         style={style}
-        src={'//www.youtube.com/embed/AzS_BqFefGQ'}
+        src={src}
       />
 
       </>
