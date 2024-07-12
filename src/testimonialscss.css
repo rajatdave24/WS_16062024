@@ -1,6 +1,6 @@
 #testimonials {
   display: flex;  
-  padding: 80px 0;
+  padding: 60px 0;
   background: white;
   flex-direction: column;
   justify-content: center;
@@ -31,10 +31,21 @@
     }
 
     .testimonial {
+      display:flex;
+      flex-direction: column;
       position: relative;
       padding: 20px;
       width: 60vw;
+      align-items: center;
+
     }  
+
+    .container{
+      width: 100vw;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+    }
   }
   
   

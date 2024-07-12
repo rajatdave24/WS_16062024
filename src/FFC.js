@@ -47,9 +47,9 @@ export const FFC = () => {
                         {/* <li><a href='/'>Home</a></li> */}
                         <li><Link to='/About'>About</Link></li>
                         <li><Link to="/AnnaDan">Anna Daan</Link></li>
-                        <li><Link to="/Govinda">Impact</Link></li>
-                        <li><Link to="/Narasimha">Contact</Link></li>
-                        <li><Link to="/Varaha">Donate</Link></li>
+                        <li><Link to="/Impact">Impact</Link></li>
+                        <li><Link to="/Contact">Contact</Link></li>
+                        <li><Link to="/Donate">Donate</Link></li>
                     </ul>
                     <div className={(menu) ? 'menuIconClicked' : 'menuIcon'} onClick={() => {
                         setMenu(prevState => !prevState); console.log(menu, document.getElementById

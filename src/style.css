@@ -191,8 +191,7 @@ z-index: 0;
   width: 80%;
   left: 10%;
   gap: 20px;
-  height: 120px;
-  
+  height: 120px; 
 
 }
 
@@ -705,6 +704,17 @@ z-index: 0;
   display: flex;
   width: 100vw;
   height: 100vh;
+
+  display: flex;
+  position: relative;
+  margin-top: 78px;
+  background-image: url(../public/FFC-Banner-WEB-1_11zon.jpeg);
+  background-size: contain;
+  background-size: 1370px 641px;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 90vh;
+  background-position: 50%;
 }
 
 .sticky{
@@ -720,6 +730,7 @@ z-index: 0;
   display:flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   /* transition: 0.3s ease; */
 }
 
@@ -743,16 +754,14 @@ z-index: 0;
   flex-direction: column;
   height:auto;
   justify-content: center;
+  align-items: center;
 }
 
 .facts1{
   justify-content: center;
-  left: 36%;
+
 }
 
-.donationBox{
-  left: 25%;
-}
 
 .galleryNews{
   border: 1px solid black;
