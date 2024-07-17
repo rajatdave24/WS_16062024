@@ -29,7 +29,7 @@ const NavBar = () => {
                 <li><Link to="/AnnaDan">Anna Daan</Link></li>
                 <li><Link to="/Impact">Impact</Link></li>
                 <li><Link to="/Contact">Contact</Link></li>
-                <li><Link to="/Donate">Donate</Link></li>
+                    <Link to="/Donate" className='donateButton'>Donate</Link>
              </ul>
             <div className={(menu) ? 'menuIconClicked' : 'menuIcon'} onClick = {() => { setMenu(prevState=> !prevState); console.log(menu, document.getElementById
                 ('ul').className)}}>&#9776;</div >

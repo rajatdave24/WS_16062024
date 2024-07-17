@@ -5,7 +5,7 @@ import Govinda from './pages/Impact';
 import Narasimha from './pages/Contact';
 import Varaha from './pages/Donate';
 import About from './pages/About';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link, NavLink } from 'react-router-dom';
 import NavBar from './NavBar';
 import Test from './pages/Test';
 import Video from './Video';
@@ -49,7 +49,7 @@ export const FFC = () => {
                         <li><Link to="/AnnaDan">Anna Daan</Link></li>
                         <li><Link to="/Impact">Impact</Link></li>
                         <li><Link to="/Contact">Contact</Link></li>
-                        <li><Link to="/Donate">Donate</Link></li>
+                        <a href="#donateNow" className='donateButton'>Donate</a>
                     </ul>
                     <div className={(menu) ? 'menuIconClicked' : 'menuIcon'} onClick={() => {
                         setMenu(prevState => !prevState); console.log(menu, document.getElementById
@@ -72,7 +72,7 @@ export const FFC = () => {
                 <div className="content">Hunger kills 9 million people every year and 24,000 people every day and out of them 18,000 are children. 60% of the children in India go to sleep hungry every night. Half the children in the age group of 6 to 14 years do not have access to primary education. We feel, by subjecting children to hunger, we rob them of their God given potential. India's progress in reducing child malnutrition is very slow.</div>
             </div>
 
-            <div className='facts'>
+            <div className='facts' id='donateNow'>
                 <div className='facts1' style={{ width: '170px' }}><p style={{ justifySelf: 'centre', marginTop: '-2px', fontSize: '25px', fontWeight: '30px', marginBottom: '0px' }}>300 Crore</p><p>meals served around the world</p></div>
                 <div className='facts1' style={{ backgroundColor: '#3b95e0', width: '170px' }}><p style={{ justifySelf: 'centre', marginTop: '-2px', fontSize: '25px', fontWeight: '30px', marginBottom: '0px' }}>11.6 Crore</p><p>meals served during COVID lockdown</p></div>
                 <div className='facts1' style={{ backgroundColor: '#ae57cd' }}><p style={{ justifySelf: 'centre', marginTop: '-2px', fontSize: '25px', fontWeight: '30px', marginBottom: '0px' }}>54 Years</p><p>of service to humanity</p></div>
@@ -80,7 +80,7 @@ export const FFC = () => {
 
             </div>
 
-            <div className='donationContainer' id='donateNow'>
+            <div className='donationContainer' >
                 <div className="donationBox">
                     <div className="donationList">
                         <div className="donationFlex ">
