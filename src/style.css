@@ -17,6 +17,7 @@ background-color: white;
 overflow-x: hidden;
 scroll-behavior: smooth;
 transition-duration: 0.3s;
+-webkit-overflow-scrolling: touch;
 }
 
 h1 {
@@ -37,6 +38,26 @@ font-size: 1.5rem;
   background-position: 50%;
 
 
+}
+
+.bannerFlex{
+  display: inline-flex;
+  position: absolute;
+  top: 40vh;
+  width: 100vw;
+  height: 23vh;
+  background-color:black;
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  background-color: rgba(5, 0, 0, 0.582);
+  justify-content: center;
+}
+
+.bannerFlex p{
+  position: absolute;
+  top: -30px;
 }
 
 .menuContainer {
@@ -92,7 +113,7 @@ background-color: rgb(224, 222, 222);
     top: -5px;
     margin-right: 12px;
     padding: 15px 15px;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 20px;
     font-family: 'Times New Roman', Times, serif;
     color: black;
@@ -174,7 +195,7 @@ z-index: 0;
   white-space: pre-wrap;
   padding-left: 20px;
   padding-right: 20px;
-  font-size: 22px;
+  font-size: 16px;
   font-family: 'Times New Roman', Times, serif;
   /* color: rgba(47, 52, 63, 0.56); */
   color: black;
@@ -187,10 +208,10 @@ z-index: 0;
   flex-direction: row;
   justify-content: space-between;
   border: 1px solid black;
-  margin-top: 80px;
+  margin-top: 20px;
   width: 80%;
   left: 10%;
-  gap: 20px;
+  gap: 5px;
   height: 120px; 
 
 }
@@ -200,7 +221,7 @@ z-index: 0;
   display: flex;
   flex-direction: column;
   height: 75%;
-  width: 170px;
+  width: 150px;
   /* border: 1px solid green; */
   border-radius: 10px;
   top: -10px;
@@ -323,7 +344,6 @@ z-index: 0;
 }
 
 .donationFlex :hover{
-  font-size: 100px;
   background-color:  #60349e;
 }
 
@@ -522,6 +542,7 @@ z-index: 0;
   padding-top: 6px;
   list-style: none;
   text-decoration: none;
+  -webkit-overflow-scrolling: touch;
 }
 
 
@@ -820,6 +841,25 @@ z-index: 0;
   list-style: none;
   text-decoration: none;
 }
+
+.donationSticker{
+  display: flex;
+  position: fixed;
+  background-color: blue;
+  color: white !important;
+  font-weight: 600;
+  left: 0;
+  margin-top: -50px;
+  right: 0;
+  bottom: -15px;
+  z-index: 1000;
+  height: 75px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
 
 
 @keyframes test {

@@ -20,10 +20,24 @@ const MenuContext = createContext();
 
 export const FFC = () => {
     const [menu, setMenu] = useState(false);
-
-
-
+    const donateRef = useRef(null);
     const inforef = useRef();
+
+    const scrollToSection = (elementRef) =>{
+        window.scrollTo(0,
+            elementRef.current.offsetTop
+        
+        );
+    }
+    // document.addEventListener('click',(e)=>{
+
+    //     if(e.target != document.getElementById('menuList') && (e.target.tagName != 'LI') && (e.target.tagName != 'A') && (e.target.getAttribute('class') != null) && ((this.getAttribute('class') != 'menuIcon'))){
+    //         console.log('outside click!',e.target.tagName,e.target.getAttribute('class'));
+    //         // setMenu(false);
+    //     }
+    //     else console.log('inside Click!!!');
+
+    // });
 
     window.addEventListener('resize', () => {
         if (window.innerWidth > 900)
@@ -41,7 +55,7 @@ export const FFC = () => {
                         <img src="https://iskconmumbai.com/images/logo-black.png" alt="Logo" className="logo" />
                         <h3 className="logoText">ISKCON Food For Child</h3>
                     </Link>
-                    <ul className={(menu) ? 'menuListClicked' : 'menuList'} id="ul">
+                    <ul className={(menu) ? 'menuListClicked' : 'menuList'} id="menuList">
 
                         {/* (window.innerWidth < 900) */}
                         {/* <li><a href='/'>Home</a></li> */}
@@ -49,18 +63,17 @@ export const FFC = () => {
                         <li><Link to="/AnnaDan">Anna Daan</Link></li>
                         <li><Link to="/Impact">Impact</Link></li>
                         <li><Link to="/Contact">Contact</Link></li>
-                        <a href="#donateNow" className='donateButton'>Donate</a>
+                        <a href="#donateNow" className='donateButton' onClick={()=>scrollToSection(donateRef)}>Donate</a>
                     </ul>
-                    <div className={(menu) ? 'menuIconClicked' : 'menuIcon'} onClick={() => {
-                        setMenu(prevState => !prevState); console.log(menu, document.getElementById
-                            ('ul').className)
-                    }}>&#9776;</div >
+                    <div className={(menu) ? 'menuIconClicked' : 'menuIcon'} onClick={(e) =>
+                        setMenu(prevState => !prevState)}>&#9776;</div >
                 </div >
-
+                        
             </div >
             <div className='app'>
                 {/* <img src="FFC-Banner-WEB-1_JPEG.jpg" className={(menu) ? 'image1': 'image'} alt="lotus"/> */}
-                <a href='#donateNow'>Donate Now</a>
+                <a href='#donateNow'>Donate Now</a><br/>
+                <div className='bannerFlex'> <p> Share few meals with <br/><span style={{color:'#d294ff'}}>Poor, Hungry and Malnourished</span><br/>Children</p></div>
             </div>
 
             {/* <p style={{display: 'flex',position: 'relative',paddingTop: '670px' }}>
@@ -72,11 +85,11 @@ export const FFC = () => {
                 <div className="content">Hunger kills 9 million people every year and 24,000 people every day and out of them 18,000 are children. 60% of the children in India go to sleep hungry every night. Half the children in the age group of 6 to 14 years do not have access to primary education. We feel, by subjecting children to hunger, we rob them of their God given potential. India's progress in reducing child malnutrition is very slow.</div>
             </div>
 
-            <div className='facts' id='donateNow'>
+            <div className='facts'>
                 <div className='facts1' style={{ width: '170px' }}><p style={{ justifySelf: 'centre', marginTop: '-2px', fontSize: '25px', fontWeight: '30px', marginBottom: '0px' }}>300 Crore</p><p>meals served around the world</p></div>
                 <div className='facts1' style={{ backgroundColor: '#3b95e0', width: '170px' }}><p style={{ justifySelf: 'centre', marginTop: '-2px', fontSize: '25px', fontWeight: '30px', marginBottom: '0px' }}>11.6 Crore</p><p>meals served during COVID lockdown</p></div>
                 <div className='facts1' style={{ backgroundColor: '#ae57cd' }}><p style={{ justifySelf: 'centre', marginTop: '-2px', fontSize: '25px', fontWeight: '30px', marginBottom: '0px' }}>54 Years</p><p>of service to humanity</p></div>
-                <div className='facts1' style={{ backgroundColor: '#f29e21' }}><p style={{ justifySelf: 'centre', marginTop: '-2px', fontSize: '25px', fontWeight: '30px', marginBottom: '0px' }}>110</p><p>kitchens across India</p></div>
+                <div className='facts1' style={{ backgroundColor: '#f29e21' }}><p style={{ justifySelf: 'centre', marginTop: '-2px', fontSize: '25px', fontWeight: '30px', marginBottom: '0px' }} id='donateNow' ref={donateRef}>110</p><p>kitchens across India</p></div>
 
             </div>
 
@@ -229,6 +242,11 @@ export const FFC = () => {
             {/* <Footer style={{position:'absolute',display:'flex',top:'3000px'}}/> */}
 
             {/* <Footer/> */}
+            <div>
+                <a href='#donateNow' onClick={(e)=>document.getElementById('donateNow').scrollIntoView}>
+                    <div className='donationSticker'>Donate!</div>
+                </a>
+            </div>
             <Footer />
         </div>
     );
