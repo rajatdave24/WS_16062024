@@ -42,11 +42,14 @@ export const FFC = () => {
     window.addEventListener('click',(e)=>{
         var menuIcon = document.getElementById('menuIcon');
         var menuList = document.getElementById('menuList');
+        var menuContainer = document.getElementById('menuContainer');
             console.log(e.target);
         if((e.target != menuIcon) && (e.target != menuContainer)){
             console.log('outside Click!!!');
             menuList.className = 'menuList';
             menuIcon.className = 'menuIcon';
+            menuContainer.className = 'menuContainer';
+            setMenu(false);
         }
 
     });
