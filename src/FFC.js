@@ -39,6 +39,18 @@ export const FFC = () => {
 
     // });
 
+    window.addEventListener('click',(e)=>{
+        var menuIcon = document.getElementById('menuIcon');
+        var menuList = document.getElementById('menuList');
+            console.log(e.target);
+        if((e.target != menuIcon) && (e.target != menuContainer)){
+            console.log('outside Click!!!');
+            menuList.className = 'menuList';
+            menuIcon.className = 'menuIcon';
+        }
+
+    });
+
     window.addEventListener('resize', () => {
         if (window.innerWidth > 900)
             setMenu(false);
@@ -66,7 +78,7 @@ export const FFC = () => {
                         <a href="#donateNow" className='donateButton' onClick={(e)=>{e.stopPropagation;scrollToSection(donateRef)}}>Donate</a>
                     </ul>
                     <div className={(menu) ? 'menuIconClicked' : 'menuIcon'} onClick={(e) =>
-                        setMenu(prevState => !prevState)}>&#9776;</div >
+                        setMenu(prevState => !prevState)} id='menuIcon'>&#9776;</div >
                 </div >
                         
             </div >
