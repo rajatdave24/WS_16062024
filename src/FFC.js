@@ -63,7 +63,7 @@ export const FFC = () => {
                         <li><Link to="/AnnaDan">Anna Daan</Link></li>
                         <li><Link to="/Impact">Impact</Link></li>
                         <li><Link to="/Contact">Contact</Link></li>
-                        <a href="#donateNow" className='donateButton' onClick={()=>scrollToSection(donateRef)}>Donate</a>
+                        <a href="#donateNow" className='donateButton' onClick={(e)=>{e.stopPropagation;scrollToSection(donateRef)}}>Donate</a>
                     </ul>
                     <div className={(menu) ? 'menuIconClicked' : 'menuIcon'} onClick={(e) =>
                         setMenu(prevState => !prevState)}>&#9776;</div >
@@ -73,7 +73,7 @@ export const FFC = () => {
             <div className='app'>
                 {/* <img src="FFC-Banner-WEB-1_JPEG.jpg" className={(menu) ? 'image1': 'image'} alt="lotus"/> */}
                 <a href='#donateNow'>Donate Now</a><br/>
-                <div className='bannerFlex'> <p> Share few meals with <br/><span style={{color:'#d294ff'}}>Poor, Hungry and Malnourished</span><br/>Children</p></div>
+                <div className='bannerFlex'> <p> Share few meals with <span style={{color:'#d294ff'}}>Poor, Hungry and Malnourished</span> Children</p></div>
             </div>
 
             {/* <p style={{display: 'flex',position: 'relative',paddingTop: '670px' }}>
@@ -243,7 +243,7 @@ export const FFC = () => {
 
             {/* <Footer/> */}
             <div>
-                <a href='#donateNow' onClick={(e)=>document.getElementById('donateNow').scrollIntoView}>
+                <a href='#donateNow' onClick={()=>scrollToSection(donateRef)}>
                     <div className='donationSticker'>Donate!</div>
                 </a>
             </div>
