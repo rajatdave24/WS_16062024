@@ -8,12 +8,11 @@ import About from './pages/About';
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
 import FFC from './FFC';
 import Test from './pages/Test';
-// import './bootstrap/dist/css/bootstrap.min.css';
+// import './bootstrap/dist/css/bootstrap.min.css'; 
 import './style.css';
 import Footer from './Footer';
 
 export const App = () => {
-
 
 return(
 <>
@@ -26,7 +25,7 @@ return(
         <Route path='/' element={<FFC/>}></Route>
     </Routes>
 <div>
-
+  
 </div>
 </>
   );

@@ -44,11 +44,11 @@ export const FFC = () => {
         var menuList = document.getElementById('menuList');
         var menuContainer = document.getElementById('menuContainer');
             console.log(e.target);
-        if((e.target != menuIcon) && (e.target != menuContainer)){
-            console.log('outside Click!!!');
-            menuList.className = 'menuList';
-            menuIcon.className = 'menuIcon';
-            menuContainer.className = 'menuContainer';
+        if((e.target != menuIcon) && (e.target != menuContainer) && ((e.target != menuList))){
+            // console.log('outside Click!!!');
+            // menuList.className = 'menuList';
+            // menuIcon.className = 'menuIcon';
+            // menuContainer.className = 'menuContainer';
             setMenu(false);
         }
 
@@ -78,10 +78,10 @@ export const FFC = () => {
                         <li><Link to="/AnnaDan">Anna Daan</Link></li>
                         <li><Link to="/Impact">Impact</Link></li>
                         <li><Link to="/Contact">Contact</Link></li>
-                        <a href="#donateNow" className='donateButton' onClick={(e)=>{e.stopPropagation;scrollToSection(donateRef)}}>Donate</a>
+                        <a href="#donateNow" className='donateButton' onClick={(e)=>{e.stopPropagation;e.preventDefault;scrollToSection(donateRef)}}>Donate</a>
                     </ul>
-                    <div className={(menu) ? 'menuIconClicked' : 'menuIcon'} onClick={(e) =>
-                        setMenu(prevState => !prevState)} id='menuIcon'>&#9776;</div >
+                    <div className={(menu) ? 'menuIconClicked' : 'menuIcon'} onClick={(e) =>{e.stopPropagation;e.preventDefault;
+                        setMenu(prevState => !prevState)}} id='menuIcon'>&#9776;</div >
                 </div >
                         
             </div >

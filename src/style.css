@@ -636,11 +636,12 @@ z-index: 0;
   position: absolute;
   display: flex;
   top: 22px;
-  right: 135px;
+  /* right: 135px; */
+  right: 35px;
   cursor: pointer;
   font-size: 25px;
   font-weight: bolder;
-  margin-right: 120px;
+  /* margin-right: 120px; */
   transition: 0.3s ease;
 }
 
@@ -661,14 +662,15 @@ z-index: 0;
 position: fixed;
 display: block;
 height: 80px;
-width: 100%;
+width: 100vw;
 margin-right: 50%;
 top: 0px;
 left: 0px;
 right: 0px;
 border: 1px solid black;
-box-shadow:
-4px 8px rgba(0, 0, 0, 0.12), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+/* box-shadow:
+4px 8px rgba(0, 0, 0, 0.12), 0 6px 20px 0 rgba(0, 0, 0, 0.15); */
+box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
 transition: 0.3s ease;
 background-color: white;
 z-index: 200;
@@ -679,7 +681,8 @@ z-index: 200;
   opacity: 1;
   display: flex;
   position: fixed;
-  top: -16px;
+  top: 62px;
+  /* top: -16px; */
   right: -120px;
   width: 200px;
   height: 100%;
@@ -848,6 +851,7 @@ z-index: 0;
   background-color: blue;
   color: white !important;
   font-weight: 600;
+  font-size: 20px;
   left: 0;
   margin-top: -50px;
   right: 0;
@@ -858,6 +862,7 @@ z-index: 0;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
+  padding-bottom: 10px;
 }
 
 

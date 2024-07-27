@@ -1,22 +1,23 @@
 footer{
-    display:flex;
-      flex-direction: row;
-      justify-content: center;
-      width: 100%;
-      position: relative;
-      bottom: 0;
-      background:#343434;
-      color: white;
-      padding: 50px 0;
-      font-size: 13px;
-      line-height: 20px;
-    }
+   display:block;
+   flex-direction: row;
+   justify-content: center;
+   width: 100%;
+   position: relative;
+   bottom: 0;
+   background:#343434;
+   color: white;
+   padding-top: 25px;
+   font-size: 13px;
+   line-height: 20px;
+}
     
 .container{
     width: 1140px;
-    margin: auto;
+    margin: 0px !important;
     display: flex;
-    justify-content: center;
+    padding-left: 150px;
+    justify-content: space-between;
 }
 
     .row{
@@ -85,6 +86,8 @@ footer{
     }
     
     .social-icons{
+      display: flex;
+      gap: 20px;
       width: 40px;
       height: 40px;
       border-radius: 50%;
@@ -93,16 +96,39 @@ footer{
       font-size: 20px;
       margin-right: 15px;
       cursor: pointer;
+      color: white;
+      line-height: 22px;
+      padding-left: 20px;
     }
   
     .social-icons ul{
       margin-top: -30px;
-      padding-left: 10px;
+      padding-left: 15px;
+    }
+
+    .social-icons li a{
+      color: white;
     }
   
   .bottom-bar{
     background: #f18930;
     text-align: center;
-    padding: 10px 0;
-    margin-top: 50px;
+    padding: 10px;
+    line-height: 8px;
+    margin-top: 20px;
+  }
+
+  .container .footer-content .list li a{
+
+    list-style: none;
+    text-decoration: none;
+    color: white;
+  }
+
+  .list{
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    line-height: 22px;
   }
