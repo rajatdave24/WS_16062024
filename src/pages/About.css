@@ -2,23 +2,26 @@
     display: inline-flex;
     position: relative;
     margin-top: 78px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     height: 500px;
     justify-content: center;
     height:auto;
+    padding-right: 20px;
   }
   
   .i1{
     display: flex;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     width: 25%;
     height: 50%;
     margin-left: 20px;
+    justify-content: center;
   }
   
   .i1 ul{
     gap: 20px;
     line-height: 50px;
+    padding-left: 10px;
   }
   
   
@@ -58,8 +61,9 @@
     display: inline;
     width: 75vw;
     position: relative;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     padding-left: 30px;
+    padding-right: 30px;
     height:auto;
   }
 
@@ -74,4 +78,49 @@
     line-height: 150%;
     font-weight: 500;
     margin-bottom: 25px;
+  }
+
+  @media screen and (max-width: 500px){
+    .i1{
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      width: 80vw;
+      height:auto;
+      overflow-x: visible;
+    }
+
+    .i2{
+      display: block;
+      padding-right: 30px;
+      padding-left: 30px;
+      width:auto;
+    }
+
+    .infoPageContainer{
+      justify-content: center;
+      padding: 5%;
+      display: inline-block;
+      align-items: center;
+    }
+
+    ul li {
+      list-style: none;
+      float: left;
+  }
+  .i1 ul{
+    display: flex;
+    gap: 5px;
+    line-height: 50px;
+    margin: 0px !important;
+  }
+
+  .i1 ul div{
+    width: 90px;
+  }
+
+  .i1 li a{
+    padding: 17px;
+    gap: 1px;
+  }
   }

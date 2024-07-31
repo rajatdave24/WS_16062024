@@ -12,7 +12,7 @@ const About =()=> {
 
         <NavBar/>
 
-        <div className='infoPageContainer'>
+        <div className='infoPageContainer col-md-12'>
             <div className='i1'>
               <ul>
                 <div>

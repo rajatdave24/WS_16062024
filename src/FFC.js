@@ -24,6 +24,7 @@ export const FFC = () => {
     const inforef = useRef();
 
     const scrollToSection = (elementRef) =>{
+        console.log(elementRef.current.offsetTop);
         window.scrollTo(0,
             elementRef.current.offsetTop
         
@@ -43,7 +44,7 @@ export const FFC = () => {
         var menuIcon = document.getElementById('menuIcon');
         var menuList = document.getElementById('menuList');
         var menuContainer = document.getElementById('menuContainer');
-            console.log(e.target);
+            // console.log(e.target);
         if((e.target != menuIcon) && (e.target != menuContainer) && ((e.target != menuList))){
             // console.log('outside Click!!!');
             // menuList.className = 'menuList';
@@ -78,7 +79,7 @@ export const FFC = () => {
                         <li><Link to="/AnnaDan">Anna Daan</Link></li>
                         <li><Link to="/Impact">Impact</Link></li>
                         <li><Link to="/Contact">Contact</Link></li>
-                        <a href="#donateNow" className='donateButton' onClick={(e)=>{e.stopPropagation;e.preventDefault;scrollToSection(donateRef)}}>Donate</a>
+                        <a href="#donateNow" className='donateButton' onClick={(e)=>{e.stopPropagation;e.preventDefault}}>Donate</a>
                     </ul>
                     <div className={(menu) ? 'menuIconClicked' : 'menuIcon'} onClick={(e) =>{e.stopPropagation;e.preventDefault;
                         setMenu(prevState => !prevState)}} id='menuIcon'>&#9776;</div >
@@ -104,13 +105,13 @@ export const FFC = () => {
                 <div className='facts1' style={{ width: '170px' }}><p style={{ justifySelf: 'centre', marginTop: '-2px', fontSize: '25px', fontWeight: '30px', marginBottom: '0px' }}>300 Crore</p><p>meals served around the world</p></div>
                 <div className='facts1' style={{ backgroundColor: '#3b95e0', width: '170px' }}><p style={{ justifySelf: 'centre', marginTop: '-2px', fontSize: '25px', fontWeight: '30px', marginBottom: '0px' }}>11.6 Crore</p><p>meals served during COVID lockdown</p></div>
                 <div className='facts1' style={{ backgroundColor: '#ae57cd' }}><p style={{ justifySelf: 'centre', marginTop: '-2px', fontSize: '25px', fontWeight: '30px', marginBottom: '0px' }}>54 Years</p><p>of service to humanity</p></div>
-                <div className='facts1' style={{ backgroundColor: '#f29e21' }}><p style={{ justifySelf: 'centre', marginTop: '-2px', fontSize: '25px', fontWeight: '30px', marginBottom: '0px' }} id='donateNow' ref={donateRef}>110</p><p>kitchens across India</p></div>
+                <div className='facts1' style={{ backgroundColor: '#f29e21' }}><p style={{ justifySelf: 'centre', marginTop: '-2px', fontSize: '25px', fontWeight: '30px', marginBottom: '0px' }} >110</p><p>kitchens across India</p></div>
 
             </div>
 
-            <div className='donationContainer' >
+            <div className='donationContainer' id='donateNow'>
                 <div className="donationBox">
-                    <div className="donationList">
+                    <div className="donationList"> 
                         <div className="donationFlex ">
                             <h5 className='title'>Donate 25 meals</h5>
                             <h5 className='donateNow'>Donate Rs. 1,000</h5>
@@ -258,7 +259,8 @@ export const FFC = () => {
 
             {/* <Footer/> */}
             <div>
-                <a href='#donateNow' onClick={()=>scrollToSection(donateRef)}>
+                <a href='#donateNow'>
+                {/* onClick={()=>scrollToSection(donateRef)} */}
                     <div className='donationSticker'>Donate!</div>
                 </a>
             </div>

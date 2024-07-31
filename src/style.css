@@ -119,6 +119,14 @@ background-color: rgb(224, 222, 222);
     color: black;
   }
 
+  /* .logoContainer{
+    position: absolute;
+    display: flex;
+    border: 1px solid black;
+    height: 80px;
+    width: 27vw;  
+  } */
+
   .menulist li {
   display: flex;
   position: relative;
@@ -580,6 +588,21 @@ z-index: 0;
 
 
   @media screen and (max-width: 940px) {
+   
+  .logo{
+    width: 40px;
+    height: 40px;
+    top: 18px;
+    left: 20px;
+
+  }  
+
+  .logoText{
+    font-size: 10px;
+    top: 0.5vh;
+    left: 55px;
+  }
+
   .menuList{
   display: none;
   opacity: 0;
@@ -655,6 +678,7 @@ z-index: 0;
   right: 0px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
   transition: 0.3s ease-out;
+  align-items: center;
   z-index: 200;
 }
 
@@ -809,7 +833,7 @@ z-index: 0;
 
 
 .galleryNews{
-  border: 1px solid black;
+  /* border: 1px solid black; */
   display: flex;
   position: relative;
   flex-direction: column;
