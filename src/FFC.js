@@ -88,7 +88,13 @@ export const FFC = () => {
             </div >
             <div className='app'>
                 {/* <img src="FFC-Banner-WEB-1_JPEG.jpg" className={(menu) ? 'image1': 'image'} alt="lotus"/> */}
-                <div className='bannerFlex'> <p> Share few meals with <span style={{color:'#d294ff'}}>Poor, Hungry and Malnourished</span> Children</p></div>
+                <div className='bannerFlex'>
+                    <p> Share few meals with <span style={{color:'#d294ff'}}>Poor, Hungry and Malnourished</span> Children</p>
+                        
+                </div>
+                <div className='flexButton'>
+                            <a href="#donateNow">Donate Now</a>
+                        </div>
             </div>
 
  

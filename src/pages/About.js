@@ -16,17 +16,17 @@ const About =()=> {
         <div className='infoPageContainer col-md-12'>
             <div className='i1'>
               <ul>
-                <div onClick={()=>{setPage(1)}}>
+                <div onClick={()=>{setPage(1)}} style={{backgroundColor: (page == 1)? '#efefef': ''}}>
                   <li>
                       <a href='#/about/ISKCON' style={{}}>ISKCON</a>
                   </li>
                 </div>
-                <div onClick={()=>{setPage(2)}}>
+                <div onClick={()=>{setPage(2)}} style={{backgroundColor: (page == 2)? '#efefef': ''}}>
                   <li>
                       <a href='#/about/OurMission'>Our Mission</a>
                   </li>
                 </div>
-                <div onClick={()=>{setPage(3)}}>
+                <div onClick={()=>{setPage(3)}} style={{backgroundColor: (page == 3)? '#efefef': ''}}>
                   <li>
                       <a href='#/about/FounderAcharya'>Founder Acharya</a></li>
                 </div>

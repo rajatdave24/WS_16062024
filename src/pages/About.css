@@ -53,10 +53,10 @@
     display: flex;
     border-radius: 10px;
   }
-  .i1 ul div:hover{
+  /* .i1 ul div:hover{
     background-color: #efefef;
   }
-  
+   */
   .i2{
     display: inline;
     width: 75vw;
