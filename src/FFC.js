@@ -61,14 +61,14 @@ export const FFC = () => {
     })
 
     return (
-        <div style={{ justifyContent: 'centre' }}>
+        <div style={{ justifyContent: 'centre' }} className='appContainer'>
 
             {/* <NavBar/> */}
 
             <div>
                 <div className={(menu) ? 'menuContainerClicked' : 'menuContainer'} id="menuContainer">
                     <Link to='/' style={{ color: 'black' }}>
-                        <img src="https://iskconmumbai.com/images/logo-black.png" alt="Logo" className="logo" />
+                        <img src="ISKCON_logo.png" alt="Logo" className="logo" />
                         <h3 className="logoText">ISKCON Food For Child</h3>
                     </Link>
                     <ul className={(menu) ? 'menuListClicked' : 'menuList'} id="menuList">
@@ -88,13 +88,10 @@ export const FFC = () => {
             </div >
             <div className='app'>
                 {/* <img src="FFC-Banner-WEB-1_JPEG.jpg" className={(menu) ? 'image1': 'image'} alt="lotus"/> */}
-                <a href='#donateNow'>Donate Now</a><br/>
                 <div className='bannerFlex'> <p> Share few meals with <span style={{color:'#d294ff'}}>Poor, Hungry and Malnourished</span> Children</p></div>
             </div>
 
-            {/* <p style={{display: 'flex',position: 'relative',paddingTop: '670px' }}>
-// # E10000 Queues setup:
-// If E10000 queue are not running for Cards follow below steps-</p> */}
+ 
 
             <div className='board'>
                 <h2 className='contentTitle'>About</h2><br />
@@ -181,7 +178,7 @@ export const FFC = () => {
                 </div>
             </div>
 
-            <h6 style={{ color: '#60349e', left: '10%', position: 'relative', fontSize: '35px' }}>Donate via NEFT/RTGS/IMPS/PayTm/UPI</h6>
+            <h2 style={{ color: '#60349e', left: '10%', position: 'relative', fontSize: '35px' }}>Donate via NEFT/RTGS/IMPS/PayTm/UPI</h2>
 
             <div className='cardContainer'>
                 <div className='c1' style={{ height: '210px' }}>
@@ -224,9 +221,9 @@ export const FFC = () => {
             <Gallery />
 
             <div style={{ textAlign: 'center' }}>
-                <h5 style={{ display: 'inline-flex', color: '#60349e', position: 'relative', fontSize: '35px', paddingTop: '50px', borderBottom: '5px solid black' }}>ISKCON in the News</h5>
+                <h2 style={{ display: 'inline-flex', color: '#60349e', position: 'relative', fontSize: '35px', paddingTop: '50px', borderBottom: '5px solid black' }}>ISKCON in the News</h2>
                 <div className='galleryNews'>
-                    <img src='iskcon-meals-in-Hindustan-Times.jpg' />
+                    <img src='iskcon-meals-in-Hindustan-Times.jpg' className='newsItem' />
                     <img src='food-distribution-in-Chandigarh.jpg' />
                     <img src='iskcon-meals-in-New-Indian-Express.jpg' />
                 </div>
@@ -250,7 +247,7 @@ export const FFC = () => {
                 <img src='pic4.jpg' style={{objectFit:'contain'}}/>
             </div>
             <p>Hare Krishna!!!</p>
-        </div> */}
+         </div> */}
 
             {/* <div className='col-md-6' style={{position:'relative',display:'flex',top:'1900px'}}>Hare Krishna!</div> */}
             {/* <p className='donationFooter'>To get the receipt of donation made through NEFT, RTGS, IMPS PayTm, UPI as mentioned above, please share your legal name, postal address with pincode (and PAN if you need 80G receipt) along with transaction details on  info@iskconfoodforchild.org <br/><br/>For more information please   Call |   Whatsapp:+91-6263756519  from Monday to Saturday between 9:00am to 6:00pm </p> */}

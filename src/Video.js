@@ -13,8 +13,8 @@ const Video =({src}) => {
         <iframe
         allowFullScreen
         frameborder="0"
-        height="60%"
-        width='35%'
+        height="80%"
+        width='85%'
         style={style}
         src={src}
       />

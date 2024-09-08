@@ -80,6 +80,36 @@
     margin-bottom: 25px;
   }
 
+  .i2 ol{
+    display: block;
+    list-style: georgian;
+    list-style-type: decimal;
+  }
+
+  .i2 ol li::before {
+    display: block;
+    counter-increment: myOrderedListItemsCounter;
+    content: counter(myOrderedListItemsCounter) " ";
+    color: #60349e;
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: absolute;
+    --size: 40px;
+    left: calc(-1* var(--size) - 10px);
+    line-height: var(--size);
+    width: var(--size);
+    height: var(--size);
+    top: 3px;
+    background: #efefef;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: inset 4px 0px 0px #efefef;
+  }
+
+  .i2 ol li::maker {
+    content:'';
+  }
+
   @media screen and (max-width: 500px){
     .i1{
       display: flex;

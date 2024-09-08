@@ -1,6 +1,7 @@
 import React from "react";
 import { BiBorderBottom } from "react-icons/bi";
 import ImageGallery from "react-image-gallery";
+import './style.css';
 import "react-image-gallery/styles/css/image-gallery.css";
 
 const galleryStyle = {
