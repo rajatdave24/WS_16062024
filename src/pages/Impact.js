@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import NavBar from '../NavBar';
+import Footer from '../Footer';
 
 const Impact =()=> {
 

@@ -7,6 +7,7 @@ import Impact from './pages/Impact';
 import Contact from './pages/Contact';
 import Donate from './pages/Donate';
 import About from './pages/About';
+import './style.css';
 
 
 const NavBar = () => {

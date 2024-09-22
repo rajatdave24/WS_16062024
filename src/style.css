@@ -227,7 +227,7 @@ z-index: 0;
   display: flex;
   flex-direction: column;
   height: 75%;
-  width: 150px;
+  width: 170px;
   /* border: 1px solid green; */
   border-radius: 10px;
   top: -10px;
@@ -523,11 +523,11 @@ z-index: 0;
   border: 2px solid yellow;
 }
 
-.galleryNews img:active{
+/* .galleryNews img:active{
   -webkit-transform: scale(2);
   transform: scale(2);
   cursor: zoom-out;
-}
+} */
 
 .videoContainer{
   display: flex;
