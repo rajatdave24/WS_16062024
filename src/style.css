@@ -12,7 +12,8 @@ html,body {
 margin: 0;
 margin-right: 0px !important;
 width: 100vw;
-font-family: system-ui, sans-serif; color: black;
+/* font-family: system-ui, sans-serif; color: black; */
+font-family:Arial, Helvetica, sans-serif;
 background-color: white;
 overflow-x: hidden;
 scroll-behavior: smooth;
@@ -31,7 +32,7 @@ font-size: 1.5rem;
   margin-top: 78px;
   background-image: url(../public/FFC-Banner-WEB-1_11zon.jpeg);
   background-size: cover;
-  background-size: 1370px 641px;
+  background-size: 100vw 100vh;
   background-repeat: no-repeat;
   width: 100vw;
   height: 90vh;
@@ -79,6 +80,7 @@ top: 10px;
 gap: 25px;
 float: right;
 padding-right: 60px;
+color: rgb(140, 27, 89);
 }
 
 ul {
@@ -143,6 +145,7 @@ background-color: rgb(224, 222, 222);
     text-decoration: none;
     font-weight: bolder;
     font-size: large;
+    color: rgb(140, 27, 89);
   }
 
   .menuIcon{
@@ -190,7 +193,8 @@ z-index: 0;
   position: absolute;
   top: -10px;
   font-size: 30px;
-  border-bottom: 5px solid #551a8b;
+  border-bottom: 5px solid rgb(140, 27, 89);
+  /* border-bottom: 5px solid #551a8b; */
 }
 
 .content{
@@ -226,18 +230,18 @@ z-index: 0;
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 75%;
+  height: auto;
   width: 170px;
   /* border: 1px solid green; */
   border-radius: 10px;
   top: -10px;
   text-align: center;
   background-color: rgb(165, 231, 65);
-  font-size:10px;
+  font-size:20px;
   color: white;
   padding: 10px;
   margin-top:10px;
-  margin-bottom: 0px;
+  margin-bottom: -45px;
 }
 
 .donationFooter{
@@ -336,9 +340,9 @@ z-index: 0;
   font-size: 16px;
   line-height: 140%;
   text-align: center;
-  color: #60349e;
+  color: rgb(140, 27, 89);
   border-radius: 24px;
-  border: 1px solid #60349e;
+  border: 1px solid rgb(140, 27, 89);
   align-self: center;
   justify-self: center;
   z-index: 100;
@@ -346,11 +350,11 @@ z-index: 0;
 
 .donateNow:hover {
   color: white;
-  background-color: #60349e;
+  background-color: rgb(140, 27, 89);
 }
 
 .donationFlex :hover{
-  background-color:  #60349e;
+  background-color:  rgb(140, 27, 89);
 }
 
 .donationInput{
@@ -454,7 +458,8 @@ z-index: 0;
     color: #ffffff;
     text-decoration: none;
     letter-spacing: 1px;
-    background-color: #60349e;
+    /* background-color: #60349e; */
+    background-color: rgb(140, 27, 89);
     vertical-align: middle;
     white-space: pre-line;
     text-align: center;
@@ -507,7 +512,7 @@ z-index: 0;
   position: relative;
   width: 95vw;
   height: 36vh;
-  /* border: 1px solid black; */
+  border: 1px solid black;
   gap: 30px;
   justify-content: space-evenly;
   padding-bottom: 50px;
@@ -566,8 +571,12 @@ z-index: 0;
 }
 
 .contact{
-  display: block;
+  display: inline-block;
   position: relative;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10vw;
+  margin-top: 5vh;
 }
 
 .flexButton{
@@ -587,6 +596,10 @@ z-index: 0;
 }
 .flexButton a{
   text-decoration: none;
+}
+
+.donationSticker{
+  display: none;
 }
 
 @keyframes gallery {
@@ -772,6 +785,7 @@ padding-left: 30px;
 width:250px;
 height: 20%;
 color: black;
+color: rgb(140, 27, 89);
 }
 
 .menuListClicked li, .menuList li {
@@ -816,7 +830,8 @@ z-index: 0;
   background-image: url(../public/FFC-Banner-WEB-1_11zon.jpeg);
   background-size: contain;
   /* background-size: 1370px 641px; */
-  background-size: 1000px 90vh;
+  /* background-size: 1000px 90vh; */
+  background-size: 100vw 100vh;
   background-repeat: no-repeat;
   width: 100vw;
   height: 90vh;
@@ -862,8 +877,8 @@ z-index: 0;
   position: relative;
   display: inline-flex;
   flex-direction: column;
-  height:auto;
-  justify-content: center;
+  height:700px;
+  /* justify-content: center; */
   align-items: center;
 }
 

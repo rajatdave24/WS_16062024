@@ -148,11 +148,24 @@ footer{
 
   @media screen and (max-width:776px){
 
+    .footer{
+      margin-left: 10vw;
+    }
+
+    .container{
+      display: flex;
+      flex-direction: column;
+      margin-left: 15vw !important;
+    }
+
+    .container p{
+      text-align: left;
+    }
+
     .bottom-bar{
       display: flex;
       flex-direction: column;
       line-height: 20px;
-
     }
 
     .bottom-bar p {
@@ -162,5 +175,13 @@ footer{
     }
     .bottom-bar>div{
       display: contents;
+    }
+
+    .footer-content p{
+      text-align: left !important;
+    }
+
+    .footer-content h3{
+      text-align: left !important;
     }
   }

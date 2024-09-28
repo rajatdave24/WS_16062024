@@ -19,7 +19,8 @@ const border={
   position: 'relative',
   fontSize:'35px',
   paddingTop:'50px',
-  borderBottom: '5px solid #60349e',
+  // borderBottom: '5px solid #60349e',
+  borderBottom: '5px solid rgb(140, 27, 89)',
   marginBottom: '25px'
 }
 

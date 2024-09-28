@@ -28,7 +28,7 @@ export const Testimonials = () => {
 
   return (
     <div id="testimonials" style={{textAlign:'center'}}>
-      <h2 style={{display:'inline-flex',color:'#60349e',position: 'relative',fontSize:'35px',borderBottom:'5px solid black',textAlign:'centre'}}>TESTIMONIALS</h2>
+      <h2 style={{display:'inline-flex',color:'rgb(140,27,89)',position: 'relative',fontSize:'35px',borderBottom:'5px solid black',textAlign:'centre'}}>TESTIMONIALS</h2>
       <div className="container1">
         <div className="section-title text-center" style={{justifyContent:'top',alignItems:'top',display:'flex',position:'relative'}}>
         </div>

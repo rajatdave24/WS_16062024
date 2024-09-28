@@ -69,7 +69,7 @@ export const FFC = () => {
                 <div className={(menu) ? 'menuContainerClicked' : 'menuContainer'} id="menuContainer">
                     <Link to='/' style={{ color: 'black' }}>
                         <img src="ISKCON_logo.png" alt="Logo" className="logo" />
-                        <h3 className="logoText">ISKCON Food For Child</h3>
+                        <h3 className="logoText">ISKCON Juhu</h3>
                     </Link>
                     <ul className={(menu) ? 'menuListClicked' : 'menuList'} id="menuList">
 
@@ -100,7 +100,7 @@ export const FFC = () => {
  
 
             <div className='board'>
-                <h2 className='contentTitle'>About</h2><br />
+                <h2 className='contentTitle'>ISKCON Food For Child</h2><br />
                 <div className="content">Hunger kills 9 million people every year and 24,000 people every day and out of them 18,000 are children. 60% of the children in India go to sleep hungry every night. Half the children in the age group of 6 to 14 years do not have access to primary education. We feel, by subjecting children to hunger, we rob them of their God given potential. India's progress in reducing child malnutrition is very slow.</div>
             </div>
 
@@ -176,15 +176,15 @@ export const FFC = () => {
                 </div>
             </div>
 
-            <h2 style={{ color: '#60349e', left: '10%', position: 'relative', fontSize: '35px', marginBottom: '20px' }}>Or, donation of your choice</h2>
+            <h2 style={{ color: 'rgb(140, 27, 89)', left: '10%', position: 'relative', fontSize: '35px', marginBottom: '20px' }}>Or, donation of your choice</h2>
             <div className='inputCont'>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer', padding: '0 20px', top: '30px' }}>
                     <span style={{ left: '10px', float: 'left', fontWeight: 'bolder', fontSize: '20px', position: 'absolute', top: '40px' }}>₹</span>
-                    <input className='donationInput' placeholder='Amount' /><h4><button style={{ color: 'white', backgroundColor: '#60349e', position: 'absolute', top: '38px', right: '10px', borderRadius: '20px', height: '35px', boxShadow: '0px 4px 4px rgb(0 0 0 / 25%), inset 0px -4px 0px #451c7e', fontSize: '20px' }}>Donate now</button></h4>
+                    <input className='donationInput' placeholder='Amount' /><h4><button style={{ color: 'white', backgroundColor: 'rgb(140, 27, 89)', position: 'absolute', top: '38px', right: '10px', borderRadius: '20px', height: '35px', boxShadow: '0px 4px 4px rgb(0 0 0 / 25%), inset 0px -4px 0px #451c7e', fontSize: '20px' }}>Donate now</button></h4>
                 </div>
             </div>
 
-            <h2 style={{ color: '#60349e', left: '10%', position: 'relative', fontSize: '35px' }}>Donate via NEFT/RTGS/IMPS/PayTm/UPI</h2>
+            <h2 style={{ color: 'rgb(140, 27, 89)', left: '10%', position: 'relative', fontSize: '30px' }}>Donate via NEFT/RTGS/IMPS/PayTm/UPI</h2>
 
             <div className='cardContainer'>
                 <div className='c1' style={{ height: '210px' }}>
@@ -227,7 +227,7 @@ export const FFC = () => {
             <Gallery />
 
             <div style={{ textAlign: 'center' }}>
-                <h2 style={{ display: 'inline-flex', color: '#60349e', position: 'relative', fontSize: '35px', paddingTop: '50px', borderBottom: '5px solid black' }}>ISKCON in the News</h2>
+                <h2 style={{ display: 'inline-flex', color: 'rgb(140, 27, 89)', position: 'relative', fontSize: '35px', paddingTop: '50px', borderBottom: '5px solid black' }}>ISKCON in the News</h2>
                 <div className='galleryNews'>
                     <img src='iskcon-meals-in-Hindustan-Times.jpg' className='newsItem' />
                     <img src='food-distribution-in-Chandigarh.jpg' />

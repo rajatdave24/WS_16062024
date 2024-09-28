@@ -6,10 +6,12 @@
   justify-content: center;
   align-items: center; 
   text-align: center;
+  border: 1px solid black;
 }
 
   #testimonials h2{
-    color: rgb(96, 52, 158);
+    /* color: rgb(96, 52, 158); */
+    color: rgb(140,27,89);
     /* left: 38%; */
     position: relative;
     /* font-size: 35px; */

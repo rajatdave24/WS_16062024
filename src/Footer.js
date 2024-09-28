@@ -19,7 +19,7 @@ function Footer() {
                 <h3 style={{color:'#f18930',marginTop:'4vh',fontSize:'15px'}}>Dr. Mukunda Madhav Das, Ph.D.</h3>
                 <p style={{textAlign:'center'}}>Director,<br/>ISKCON Food for Child</p>
                 <div class="footer-content" style={{paddingLeft:'1.1vw'}}>
-                <h3 style={{color:'#f18930',paddingLeft:'5.5vw'}}>Follow Us</h3>
+                <h3 style={{color:'#f18930',textAlign:'center'}}>Follow Us</h3>
                 <ul class="social-icons">
                  <li><a href=""><FaFacebook /></a></li>
                  <li><a href=""><FaTwitter /></a></li>

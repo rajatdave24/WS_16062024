@@ -36,7 +36,7 @@ const NavBar = () => {
             <div className={(menu) ? 'menuContainerClicked' : 'menuContainer'} id="menuContainer">
                 <Link to='/'>
                     <img src="ISKCON_logo.png" alt="Logo" className="logo"/>
-                    <h3 className="logoText">ISKCON Food For Child</h3>
+                    <h3 className="logoText">ISKCON Juhu</h3>
                 </Link>  
             <ul className={(menu) ? 'menuListClicked' : 'menuList'} id="menuList">
 
