@@ -116,31 +116,31 @@ export const FFC = () => {
                 <div className="donationBox">
                     <div className="donationList"> 
                         <div className="donationFlex ">
-                            <h5 className='title'>Donate 25 meals</h5>
+                            <h5 className='title'>Donate meals</h5>
                             <h5 className='donateNow'>Donate Rs. 1,000</h5>
                         </div>
                         <div className="donationFlex ">
-                            <h5 className='title'>Donate 50 meals</h5>
+                            <h5 className='title'>Donate meals</h5>
                             <h5 className='donateNow'>Donate Rs. 2,000</h5>
                         </div>
                         <div className="donationFlex ">
-                            <h5 className='title'>Donate 100 meals</h5>
+                            <h5 className='title'>Donate meals</h5>
                             <h5 className='donateNow'>Donate Rs. 4,000</h5>
                         </div>
                         <div className="donationFlex ">
-                            <h5 className='title'>Donate 125 meals</h5>
+                            <h5 className='title'>Donate meals</h5>
                             <h5 className='donateNow'>Donate Rs. 5,000</h5>
                         </div>
                         <div className="donationFlex ">
-                            <h5 className='title'>Donate 250 meals</h5>
+                            <h5 className='title'>Donate meals</h5>
                             <h5 className='donateNow'>Donate Rs. 10,000</h5>
                         </div>
                         <div className="donationFlex ">
-                            <h5 className='title'>Donate 500 meals</h5>
+                            <h5 className='title'>Donate meals</h5>
                             <h5 className='donateNow'>Donate Rs. 20,000</h5>
                         </div>
                         <div className="donationFlex" style={{ borderBottom: 'none' }}>
-                            <h5 className='title'>Donate 1000 meals</h5>
+                            <h5 className='title'>Donate meals</h5>
                             <h5 className='donateNow'>Donate Rs. 40,000</h5>
                         </div>
                     </div>
@@ -149,38 +149,38 @@ export const FFC = () => {
                 <div className='donationBox'>
                     <div className="donationList">
                         <div className="donationFlex ">
-                            <h5 className='title'>Donate 1250 meals</h5>
+                            <h5 className='title'>Donate meals</h5>
                             <h5 className='donateNow'>Donate Rs. 50,000</h5>
                         </div>
                         <div className="donationFlex ">
-                            <h5 className='title'>Donate 2500 meals</h5>
+                            <h5 className='title'>Donate meals</h5>
                             <h5 className='donateNow'>Donate Rs. 1,00,000</h5>
                         </div>
                         <div className="donationFlex ">
-                            <h5 className='title'>Donate 5000 meals</h5>
+                            <h5 className='title'>Donate meals</h5>
                             <h5 className='donateNow'>Donate Rs. 2,00,000</h5>
                         </div>
                         <div className="donationFlex ">
-                            <h5 className='title'>Donate 7500 meals</h5>
-                            <h5 className='donateNow'>Donate Rs. 3,00,000</h5>
+                            <h5 className='title'>Donate meals</h5>
+                            <h5 className='donateNow'><a href='https://pmny.in/EIMRsC18fOdS' style={{textDecoration:'none'}}>Donate Rs. 3,00,000</a></h5>
                         </div>
                         <div className="donationFlex">
-                            <h5 className='title'>Donate 10000 meals</h5>
+                            <h5 className='title'>Donate meals</h5>
                             <h5 className='donateNow'>Donate Rs. 4,00,000</h5>
                         </div>
                         <div className="donationFlex " style={{ borderBottom: 'none' }}>
-                            <h5 className='title'>Donate 12500 meals</h5>
+                            <h5 className='title'>Donate meals</h5>
                             <h5 className='donateNow'>Donate Rs. 5,00,000</h5>
                         </div>
                     </div>
                 </div>
             </div>
-
+            <div> <a style={{width: '135px', backgroundColor:'#1065b7', textAlign:'center', fontWeight: '800', padding:'11px 0px', color:'white', fontSize: '12px', display:'inline-block', textDecoration:'none', borderRadius: '3.229px'}} href='https://pmny.in/EIMRsC18fOdS' > Donate Now </a> </div>
             <h2 style={{ color: 'rgb(140, 27, 89)', left: '10%', position: 'relative', fontSize: '35px', marginBottom: '20px' }}>Or, donation of your choice</h2>
             <div className='inputCont'>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer', padding: '0 20px', top: '30px' }}>
                     <span style={{ left: '10px', float: 'left', fontWeight: 'bolder', fontSize: '20px', position: 'absolute', top: '40px' }}>₹</span>
-                    <input className='donationInput' placeholder='Amount' /><h4><button style={{ color: 'white', backgroundColor: 'rgb(140, 27, 89)', position: 'absolute', top: '38px', right: '10px', borderRadius: '20px', height: '35px', boxShadow: '0px 4px 4px rgb(0 0 0 / 25%), inset 0px -4px 0px #451c7e', fontSize: '20px' }}>Donate now</button></h4>
+                    <input type='number' min='0' className='donationInput' placeholder='Amount' onInput={(e)=>{e.target.value = Math.abs(e.target.value)}}/><h4><button style={{ color: 'white', backgroundColor: 'rgb(140, 27, 89)', position: 'absolute', top: '38px', right: '10px', borderRadius: '20px', height: '35px', boxShadow: '0px 4px 4px rgb(0 0 0 / 25%), inset 0px -4px 0px #451c7e', fontSize: '20px' }}>Donate now</button></h4>
                 </div>
             </div>
 

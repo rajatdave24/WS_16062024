@@ -348,7 +348,11 @@ z-index: 0;
   z-index: 100;
 }
 
-.donateNow:hover {
+.donateNow a{
+  color:  rgb(140, 27, 89);
+}
+
+.donateNow:hover, .donateNow a:hover {
   color: white;
   background-color: rgb(140, 27, 89);
 }
