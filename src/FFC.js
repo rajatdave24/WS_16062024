@@ -233,9 +233,9 @@ export const FFC = () => {
                 </div>
                 <div className='c1' style={{ height: '230px' }}>
                     <h4 style={{ position: 'absolute', left: '10px', top: '-5px' }}>Donate using Mobile Number</h4>
-                    <img src='iskconpaytm.png' style={{ position: 'absolute', height: '29px', float: 'left', top: '70px' }} onClick={()=>navigator.clipboard.writeText('7400056919')}/>
+                    <img src='iskconpaytm.png' style={{ position: 'absolute', height: '29px', float: 'left', top: '70px' }}/>
                     <span className='info' ref={inforef}>7400056919</span>
-                    <div><img src='copyIcon.png' style={{ width: '40px', height: '28px', display: 'inline', position: 'absolute', top: '130px', let: '5px' }} /></div>
+                    <div><img src='copyIcon.png' style={{ width: '40px', height: '28px', display: 'inline', position: 'absolute', top: '130px', let: '5px' }} onClick={()=>navigator.clipboard.writeText('7400056919')} /></div>
                     <a className='cardDonateBtn' href='upi://pay?pa=paytmqr2810050501011hmz7dbr2x3r@paytm&pn=Paytm%20Merchant&paytmqr=2810050501011HMZ7DBR2X3R'>Donate Now</a>
                     <div><img style={{ display: 'block', position: 'absolute', height: '80px', right: '10px', top: '100px' }} src="paytmQR.jpg" alt="paytmQR" /></div>
                 </div>
