@@ -7,6 +7,7 @@ import Impact from './pages/Impact';
 import Contact from './pages/Contact';
 import Donate from './pages/Donate';
 import About from './pages/About';
+import PayPage from './PayPage';
 import './style.css';
 
 
@@ -43,9 +44,10 @@ const NavBar = () => {
             {/* (window.innerWidth < 900) */}
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/About">About</Link></li>
-                <li><Link to="/AnnaDan">Anna Daan</Link></li>
-                <li><Link to="/Impact">Impact</Link></li>
+                {/* <li><Link to="/AnnaDan">Anna Daan</Link></li>
+                <li><Link to="/Impact">Impact</Link></li> */}
                 <li><Link to="/Contact">Contact</Link></li>
+                {/* <li><Link to="/PayPage">Pay Page</Link></li> */}
                     <Link to="/#donateNow" className='donateButton' onClick={(e)=>{e.stopPropagation;e.preventDefault;scrollToSection(donateRef)}}>Donate</Link>
              </ul>
             <div className={(menu) ? 'menuIconClicked' : 'menuIcon'} id='menuIcon' onClick = {(e) => {e.stopPropagation;e.preventDefault;setMenu(prevState =>!prevState); console.log(menu, document.getElementById

@@ -6,6 +6,7 @@ import Contact from './pages/Contact';
 import Donate from './pages/Donate';
 import About from './pages/About';
 import Success from './pages/Success';
+import PayPage from './PayPage';
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
 import FFC from './FFC';
 import Test from './pages/Test';
@@ -25,6 +26,7 @@ return(
         <Route path='/Donate' element={<Donate/>}></Route>
         <Route path='/' element={<FFC/>}></Route>
         <Route path='/success' element={<Success/>}></Route>
+        <Route path='/PayPage' element={<PayPage/>}></Route>
     </Routes>
 <div>
   

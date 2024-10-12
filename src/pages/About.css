@@ -86,7 +86,7 @@
     list-style-type: decimal;
   }
 
-  .i2 ol li::before {
+  /* .i2 ol li::before {
     display: block;
     counter-increment: myOrderedListItemsCounter;
     content: counter(myOrderedListItemsCounter) " ";
@@ -104,7 +104,7 @@
     border-radius: 50%;
     text-align: center;
     box-shadow: inset 4px 0px 0px #efefef;
-  }
+  } */
 
   .i2 ol li::maker {
     content:'';
