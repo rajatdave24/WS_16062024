@@ -72,7 +72,7 @@ export const FFC = () => {
 
         const response = await axios.get("https://iskconjuhu.in/donate.php", {
             params: {
-              key: "",
+              key: "2fKjPt",
               txnid: TxnId,
               amount: amount,
               productinfo: 'test pay',
@@ -81,7 +81,7 @@ export const FFC = () => {
               phone: '9137969203',
               surl: "http://localhost:3000/success",
               furl: "http://localhost:3000/Failure",
-              salt: "",
+              salt: "zBqitHlab9VU52l9ZDv8x5D1rxYBtgat",
               pg: "UPI",
             },
           });
@@ -225,7 +225,7 @@ export const FFC = () => {
             <div className='cardContainer'>
                 <div className='c1' style={{ height: '210px' }}>
                     <h4 style={{ position: 'absolute', left: '5px', top: '-5px' }}>Donate via NEFT / RTGS</h4>
-<div><img src='copyIcon.png' style={{ width: '40px', height: '28px', display: 'inline', position: 'absolute', top: '30px', right: '5px' }} onclick={()=>navigator.clipboard.writeText('Bank Name: Indian Overseas Bank(IOB)\nAccount Name: ISKCON Food For Child\nAccount No: 124501000022099\nIFSC Code: IOBA0001245')}/></div>
+<div><img src='copyIcon.png' style={{ width: '40px', height: '28px', display: 'inline', position: 'absolute', top: '30px', right: '5px' }} onClick={()=>navigator.clipboard.writeText('Bank Name: Indian Overseas Bank(IOB)\nAccount Name: ISKCON Food For Child\nAccount No: 124501000022099\nIFSC Code: IOBA0001245')}/></div>
                     <p><span>Bank Name: </span>Indian Overseas Bank(IOB)</p>
                     <p><span>Account Name: </span>ISKCON Food For Child</p>
                     <p><span>Account No: </span>124501000022099</p>
