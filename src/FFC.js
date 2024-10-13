@@ -72,7 +72,7 @@ export const FFC = () => {
 
         const response = await axios.get("https://iskconjuhu.in/donate.php", {
             params: {
-              key: "2fKjPt",
+              key: "",
               txnid: TxnId,
               amount: amount,
               productinfo: 'test pay',
@@ -81,7 +81,7 @@ export const FFC = () => {
               phone: '9137969203',
               surl: "http://localhost:3000/success",
               furl: "http://localhost:3000/Failure",
-              salt: "zBqitHlab9VU52l9ZDv8x5D1rxYBtgat",
+              salt: "",
               pg: "UPI",
             },
           });
