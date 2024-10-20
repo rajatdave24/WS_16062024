@@ -1,6 +1,7 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 import "./Footer.css";
-import { FaFacebook } from "react-icons/fa";
+import { FaFacebook, FaLinkedin } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
@@ -21,10 +22,11 @@ function Footer() {
                 <div class="footer-content" style={{paddingLeft:'1.1vw'}}>
                 <h3 style={{color:'#f18930',textAlign:'center'}}>Follow Us</h3>
                 <ul class="social-icons">
-                 <li><a href=""><FaFacebook /></a></li>
-                 <li><a href=""><FaTwitter /></a></li>
-                 <li><a href=""><FaInstagram /></a></li>
-                 <li><a href=""><FaYoutube /></a></li>
+                 <li><FaFacebook/></li>
+                 <li><FaTwitter onClick={()=>window.open('https://twitter.com/IskconFFC')}/></li>
+                 <li><FaInstagram onClick={()=>window.open('https://www.instagram.com/iskcon.foodforchild/')}/></li>
+                 <li><FaYoutube onClick={()=>window.open('https://youtube.com/channel/UCZdEz8o8ULkDV4jj8y7ncmg/featured')}/></li>
+                 <li><FaLinkedin onClick={()=>window.open('https://linkedin.com/company/iskcon-food-for-child/')}/></li>
               
                 </ul>
               </div>
@@ -33,11 +35,11 @@ function Footer() {
             <div class="footer-content">
                 <h3  style={{color:'#f18930',marginTop:'4vh'}}>Quick Links</h3>
                  <ul class="list">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
+                    <li><Link to='/'>Home</Link></li>
+                    <li><Link to='/About'>About</Link></li>
                     <li><a href="">Services</a></li>
                     <li><a href="">Products</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><Link to='/Contact'>Contact</Link></li>
                  </ul>
             </div>
 

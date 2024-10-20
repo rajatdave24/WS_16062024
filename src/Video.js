@@ -5,7 +5,9 @@ const Video =({src}) => {
     const style={
         position: 'relative',
         justifySelf:'centre',
-        left:'10%' 
+        alignItems:'centre',
+        height:'30vh',
+        width: '30vw'
     }
 
     return(

@@ -10,17 +10,26 @@ import { BrowserRouter, Routes, Route, Link, NavLink } from 'react-router-dom';
 import NavBar from './NavBar';
 import Test from './pages/Test';
 import Video from './Video';
+import Modal from './Modal';
 import Footer1 from './Footer';
 // import './bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
+import Alert from '@mui/material/Alert';
 import Footer from './Footer';
 import { Gallery } from './Gallery';
 import { Testimonials } from './testimonials';
+import Success from './pages/Success';
+import Failure from './pages/Failure';
 
 const MenuContext = createContext();
 
 export const FFC = () => {
     const [menu, setMenu] = useState(false);
+    const [name, setName] = useState(null);
+    const [email, setEmail] = useState(null);
+    const [num, setNum] = useState(null);
+    const [open, setOpen] = useState(false);
+    const [amount, setAmount] = useState(0);
     const donateRef = useRef(null);
     const inforef = useRef();
     const payRef = useRef();
@@ -62,29 +71,39 @@ export const FFC = () => {
             setMenu(false);
     })
 
-    const handlePay = async (amount) =>{
+    const handlePay = async () =>{
+        setEmail(null);
+        setName(null);
+        setNum(null);
         const TxnId =
         "ISKCON-JUHU-" +
         Date.now().toString() +
         Math.random().toString(36).substring(2, 15);
 
         console.log(payRef.current.value);
+        setOpen(true);
+        if((name === null) || (email === null)){
+            return alert('Please enter vlid detalis!');
 
+        }
+       
         const response = await axios.get("https://iskconjuhu.in/donate.php", {
             params: {
               key: "",
               txnid: TxnId,
               amount: amount,
               productinfo: 'test pay',
-              firstname: 'Rama Nama das',
-              email: 'rajatdave24@gmail.com',
-              phone: '9137969203',
-              surl: "http://localhost:3000/success",
-              furl: "http://localhost:3000/Failure",
+              firstname: name,
+              email: email,
+              phone: num,
+              surl: "https://iskconjuhu.in/",
+              furl: "http://localhost:3000/",
               salt: "",
               pg: "UPI",
             },
           });
+
+
           
           const htmlContent = response.data;
           console.log('htmlcontent',response,htmlContent);
@@ -93,6 +112,10 @@ export const FFC = () => {
           newWindow.document.write(htmlContent);
           newWindow.document.close();
           window.close();
+
+          setEmail(null);
+          setName(null);
+          setNum(null);
 
     }
 
@@ -130,7 +153,7 @@ export const FFC = () => {
                         
                 </div>
                 <div className='flexButton'>
-                            <a href="#donateNow">Donate Now</a>
+                            <a href="#donateNow" style={{color:'white'}}>Donate Now</a>
                         </div>
             </div>
 
@@ -142,72 +165,74 @@ export const FFC = () => {
             </div>
 
             <div className='facts'>
-                <div className='facts1' style={{ width: '170px' }}><p style={{ justifySelf: 'centre', marginTop: '-2px', fontSize: '25px', fontWeight: '30px', marginBottom: '0px' }}>300 Crore</p><p>meals served around the world</p></div>
-                <div className='facts1' style={{ backgroundColor: '#3b95e0', width: '170px' }}><p style={{ justifySelf: 'centre', marginTop: '-2px', fontSize: '25px', fontWeight: '30px', marginBottom: '0px' }}>11.6 Crore</p><p>meals served during COVID lockdown</p></div>
-                <div className='facts1' style={{ backgroundColor: '#ae57cd' }}><p style={{ justifySelf: 'centre', marginTop: '-2px', fontSize: '25px', fontWeight: '30px', marginBottom: '0px' }}>54 Years</p><p>of service to humanity</p></div>
-                <div className='facts1' style={{ backgroundColor: '#f29e21' }}><p style={{ justifySelf: 'centre', marginTop: '-2px', fontSize: '25px', fontWeight: '30px', marginBottom: '0px' }} >110</p><p>kitchens across India</p></div>
+                <div className='facts1' style={{ width: '170px' }}><p style={{ justifySelf: 'centre', marginTop: '-2px', fontSize: '25px', fontWeight: '30px', marginBottom: '0px' }}><b>300 Crore</b></p><p>meals served</p></div>
+                <div className='facts1' style={{ backgroundColor: '#3b95e0', width: '170px' }}><p style={{ justifySelf: 'centre', marginTop: '-2px', fontSize: '25px', fontWeight: '30px', marginBottom: '0px' }}><b>11.6 Crore</b></p><p>meals served during COVID</p></div>
+                <div className='facts1' style={{ backgroundColor: '#ae57cd' }}><p style={{ justifySelf: 'centre', marginTop: '-2px', fontSize: '25px', fontWeight: '30px', marginBottom: '0px' }}><b>54 Years</b></p><p>of service to humanity</p></div>
+                <div className='facts1' id='donateNow' style={{ backgroundColor: '#f29e21' }}><p style={{ justifySelf: 'centre', marginTop: '-2px', fontSize: '25px', fontWeight: '30px', marginBottom: '0px' }} ><b>110 kitchens</b></p><p>across India</p></div>
 
             </div>
 
-            <div className='donationContainer' id='donateNow'>
+            <div className='donationContainer'>
                 <div className="donationBox">
                     <div className="donationList"> 
                         <div className="donationFlex ">
                             <h5 className='title'>Donate meals</h5>
-                            <h5 className='donateNow' onClick={()=>handlePay(2601)}>Donate Rs. 2,601</h5>
+                            <h5 className='donateNow' onClick={()=>{handlePay;setOpen(true);setAmount(2601)}}>Donate Rs. 2,601</h5>
                         </div>
                         <div className="donationFlex ">
                             <h5 className='title'>Donate meals</h5>
-                            <h5 className='donateNow' onClick={()=>handlePay(5001)}>Donate Rs. 5,001</h5>
+                            <h5 className='donateNow' onClick={()=>{handlePay;setOpen(true);setAmount(5001)}}>Donate Rs. 5,001</h5>
                         </div>
                         <div className="donationFlex ">
                             <h5 className='title'>Donate meals</h5>
-                            <h5 className='donateNow' onClick={()=>handlePay(10001)}>Donate Rs. 10,001</h5>
+                            <h5 className='donateNow' onClick={()=>{handlePay;setOpen(true);setAmount(10001)}}>Donate Rs. 10,001</h5>
                         </div>
                         <div className="donationFlex ">
                             <h5 className='title'>Donate meals</h5>
-                            <h5 className='donateNow' onClick={()=>handlePay(15001)}>Donate Rs. 15,001</h5>
+                            <h5 className='donateNow' onClick={()=>{handlePay;setOpen(true);setAmount(15001)}}>Donate Rs. 15,001</h5>
                         </div>
                         <div className="donationFlex ">
                             <h5 className='title'>Donate meals</h5>
-                            <h5 className='donateNow' onClick={()=>handlePay(25001)}>Donate Rs. 25,001</h5>
+                            <h5 className='donateNow' onClick={()=>{handlePay;setOpen(true);setAmount(25001)}}>Donate Rs. 25,001</h5>
                         </div>
                         <div className="donationFlex" style={{ borderBottom: 'none' }}>
                             <h5 className='title'>Donate meals</h5>
-                            <h5 className='donateNow' onClick={()=>handlePay(35001)}>Donate Rs. 35,001</h5>
+                            <h5 className='donateNow' onClick={()=>{handlePay;setOpen(true);setAmount(35001)}}>Donate Rs. 35,001</h5>
                         </div>
                         <div className="donationFlex ">
                             <h5 className='title'>Donate meals</h5>
-                            <h5 className='donateNow' onClick={()=>handlePay(45001)}>Donate Rs. 45,001</h5>
+                            <h5 className='donateNow' onClick={()=>{handlePay;setOpen(true);setAmount(45001)}}>Donate Rs. 45,001</h5>
                         </div>
                     </div>
                 </div>
-
+                {open && 
+                <Modal setName={setName} setEmail={setEmail} setNum={setName} setOpen={setOpen} handlePay={handlePay}/>
+                }
                 <div className='donationBox'>
                     <div className="donationList">
                         <div className="donationFlex ">
                             <h5 className='title'>Donate meals</h5>
-                            <h5 className='donateNow' onClick={()=>handlePay(55001)}>Donate Rs. 55,001</h5>
+                            <h5 className='donateNow' onClick={()=>{handlePay;setOpen(true);setAmount(55001)}}>Donate Rs. 55,001</h5>
                         </div>
                         <div className="donationFlex ">
                             <h5 className='title'>Donate meals</h5>
-                            <h5 className='donateNow' onClick={()=>handlePay(111001)}>Donate Rs. 1,11,001</h5>
+                            <h5 className='donateNow' onClick={()=>{handlePay;setOpen(true);setAmount(111001)}}>Donate Rs. 1,11,001</h5>
                         </div>
                         <div className="donationFlex ">
                             <h5 className='title'>Donate meals</h5>
-                            <h5 className='donateNow' onClick={()=>handlePay(211001)}>Donate Rs. 2,11,001</h5>
+                            <h5 className='donateNow' onClick={()=>{handlePay;setOpen(true);setAmount(211001)}}>Donate Rs. 2,11,001</h5>
                         </div>
                         <div className="donationFlex ">
                             <h5 className='title'>Donate meals</h5>
-                            <h5 className='donateNow' onClick={()=>handlePay(311001)}>Donate Rs. 3,11,001</h5>
+                            <h5 className='donateNow' onClick={()=>{handlePay;setOpen(true);setAmount(311001)}}>Donate Rs. 3,11,001</h5>
                         </div>
                         <div className="donationFlex">
                             <h5 className='title'>Donate meals</h5>
-                            <h5 className='donateNow' onClick={()=>handlePay(411001)}>Donate Rs. 4,11,001</h5>
+                            <h5 className='donateNow' onClick={()=>{handlePay;setOpen(true);setAmount(411001)}}>Donate Rs. 4,11,001</h5>
                         </div>
                         <div className="donationFlex " style={{ borderBottom: 'none' }}>
                             <h5 className='title'>Donate meals</h5>
-                            <h5 className='donateNow' onClick={()=>handlePay(511001)}>Donate Rs. 5,11,001</h5>
+                            <h5 className='donateNow' onClick={()=>{handlePay;setOpen(true);setAmount(511001)}}>Donate Rs. 5,11,001</h5>
                         </div>
                     </div>
                 </div>
@@ -216,16 +241,15 @@ export const FFC = () => {
             <div className='inputCont'>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer', padding: '0 20px', top: '30px' }}>
                     <span style={{ left: '10px', float: 'left', fontWeight: 'bolder', fontSize: '20px', position: 'absolute', top: '40px' }}>₹</span>
-                    <input type='number' min='0' className='donationInput' placeholder='Amount' ref={payRef} onInput={(e)=>{e.target.value = Math.abs(e.target.value)}} onKeyDown={(e)=>{e.key ==='Enter'? handlePay(payRef.current.value): null}}/><h4><button style={{ color: 'white', backgroundColor: 'rgb(140, 27, 89)', position: 'absolute', top: '38px', right: '10px', borderRadius: '20px', height: '35px', boxShadow: '0px 4px 4px rgb(0 0 0 / 25%), inset 0px -4px 0px #451c7e', fontSize: '20px' }} onClick={()=>handlePay(payRef.current.value)}>Donate now</button></h4>
+                    <input type='number' min='0' className='donationInput' placeholder='Amount' ref={payRef} onInput={(e)=>{e.target.value = Math.abs(e.target.value)}} onKeyDown={(e)=>{e.key ==='Enter'? setAmount(payRef.current.value): null}}/><h4><button style={{ color: 'white', backgroundColor: 'rgb(140, 27, 89)', position: 'absolute', top: '38px', right: '10px', borderRadius: '20px', height: '35px', boxShadow: '0px 4px 4px rgb(0 0 0 / 25%), inset 0px -4px 0px #451c7e', fontSize: '20px' }} onClick={()=>{handlePay;setOpen(true);setAmount(payRef.current.value)}}>Donate now</button></h4>
                 </div>
             </div>
 
-            <h2 style={{ color: 'rgb(140, 27, 89)', left: '10%', position: 'relative', fontSize: '30px' }}>Donate via NEFT/RTGS/IMPS/PayTm/UPI</h2>
-
+            <h2 style={{ color: 'rgb(140, 27, 89)', top:'60px', left: '10%', position: 'relative', fontSize: '30px', marginBottom:'120px'}}>Donate via NEFT/RTGS/IMPS/PayTm/UPI</h2>
             <div className='cardContainer'>
                 <div className='c1' style={{ height: '210px' }}>
                     <h4 style={{ position: 'absolute', left: '5px', top: '-5px' }}>Donate via NEFT / RTGS</h4>
-<div><img src='copyIcon.png' style={{ width: '40px', height: '28px', display: 'inline', position: 'absolute', top: '30px', right: '5px' }} onClick={()=>navigator.clipboard.writeText('Bank Name: Indian Overseas Bank(IOB)\nAccount Name: ISKCON Food For Child\nAccount No: 124501000022099\nIFSC Code: IOBA0001245')}/></div>
+                    <div onClick={()=>alert('copied!')}><img src='copyIcon.png' style={{ width: '40px', height: '28px', display: 'inline', position: 'absolute', top: '30px', right: '10px' }} onClick={()=>navigator.clipboard.writeText('Bank Name: Indian Overseas Bank(IOB)\nAccount Name: ISKCON Food For Child\nAccount No: 124501000022099\nIFSC Code: IOBA0001245')}/></div>
                     <p><span>Bank Name: </span>Indian Overseas Bank(IOB)</p>
                     <p><span>Account Name: </span>ISKCON Food For Child</p>
                     <p><span>Account No: </span>124501000022099</p>
@@ -233,17 +257,17 @@ export const FFC = () => {
                 </div>
                 <div className='c1' style={{ height: '230px' }}>
                     <h4 style={{ position: 'absolute', left: '10px', top: '-5px' }}>Donate using Mobile Number</h4>
+                    <img src='copyIcon.png' style={{ width: '40px', height: '28px', display: 'inline', position: 'absolute', top: '35px', right: '10px' }} onClick={()=>navigator.clipboard.writeText('7400056919')}/>
                     <img src='iskconpaytm.png' style={{ position: 'absolute', height: '29px', float: 'left', top: '70px' }}/>
                     <span className='info' ref={inforef}>7400056919</span>
-                    <div><img src='copyIcon.png' style={{ width: '40px', height: '28px', display: 'inline', position: 'absolute', top: '130px', let: '5px' }} onClick={()=>navigator.clipboard.writeText('7400056919')} /></div>
                     <a className='cardDonateBtn' href='upi://pay?pa=paytmqr2810050501011hmz7dbr2x3r@paytm&pn=Paytm%20Merchant&paytmqr=2810050501011HMZ7DBR2X3R'>Donate Now</a>
-                    <div><img style={{ display: 'block', position: 'absolute', height: '80px', right: '10px', top: '100px' }} src="paytmQR.jpg" alt="paytmQR" /></div>
+                    <img style={{ display: 'block', position: 'absolute', height: '80px', right: '10px', top: '100px' }} src="paytmQR.jpg" alt="paytmQR" />
                 </div>
                 <div className='c1' style={{ height: '210px' }}>
                     <h4 style={{ position: 'absolute', left: '5px', top: '-5px', left: '38px' }}>Donate through</h4>
                     <img style={{ position: 'absolute', width: '138px', top: '45px', height: '24px', display: 'inline', left: '30px' }} src="iskconupi.png" alt="support"></img>
                     <span className="info" style={{ top: '80px' }}>iskconfoodforchild@iob</span>
-                    <img src="copyicon.png" style={{ width: '40px', height: '28px', display: 'inline', position: 'absolute', top: '105px', let: '5px' }} onClick={()=>navigator.clipboard.writeText('iskconfoodforchild@iob')} alt="support"></img>
+                    <img src="copyicon.png" style={{ width: '40px', height: '28px', display: 'inline', position: 'absolute', top: '30px', right: '15px' }} onClick={()=>navigator.clipboard.writeText('iskconfoodforchild@iob')} alt="support"></img>
                     <span className="info" style={{ width: '120px', fontSize: '12px', top: '150px' }}> Check your UPI limit with your bank. Max. Limit 1 lac per day</span>
                     <img style={{ display: 'block', position: 'absolute', height: '80px', right: '5px', top: '100px' }} src="UPI_QR.jpg" alt="support"></img>
                 </div>
@@ -275,6 +299,7 @@ export const FFC = () => {
 
                 <Video src={'https://www.youtube.com/embed/AzS_BqFefGQ'} />
                 <Video src={'https://www.youtube.com/embed/dXZk8gYp3do'} />
+                <Video src={'https://www.youtube.com/embed/NGmB0prjYRU'}/>
 
             </div>
 

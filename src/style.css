@@ -30,7 +30,8 @@ font-size: 1.5rem;
   display: flex;
   position: relative;
   margin-top: 78px;
-  background-image: url(../public/FFC-Banner-WEB-1_11zon.jpeg);
+  /* background-image: url(../public/FFC-Banner-WEB-1_11zon.jpeg); */
+  background-image: url(../public/Images_final/banner.avif);
   background-size: cover;
   background-size: 100vw 100vh;
   background-repeat: no-repeat;
@@ -241,7 +242,7 @@ z-index: 0;
   color: white;
   padding: 10px;
   margin-top:10px;
-  margin-bottom: -45px;
+  margin-bottom: -10px;
 }
 
 .donationFooter{
@@ -516,7 +517,7 @@ z-index: 0;
   position: relative;
   width: 95vw;
   height: 36vh;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   gap: 30px;
   justify-content: space-evenly;
   padding-bottom: 50px;
@@ -545,7 +546,9 @@ z-index: 0;
   align-items: center;
   justify-content: center;
   gap: 80px;
-  width: 80vw;
+  width: auto;
+  margin-left: 5vw;
+  margin-right: 5vw;
 }
 
 .donateButton{
@@ -586,7 +589,7 @@ z-index: 0;
 .flexButton{
   display: flex;
   position: relative;
-  background-color: greenyellow;
+  background-color: rgba(241, 152, 18, 0.937);
   width: 170px;
   height: 40px;
   font-size: 24px;
@@ -638,6 +641,18 @@ z-index: 0;
    }
   }
 
+  @media screen and (max-width: 1300px){
+    .videoContainer{
+      flex-direction: column;
+      height: auto;
+      width: auto;
+      /* align-items: center;
+      justify-content: center;
+      justify-self: center;
+      
+      width: 20%; */
+    }
+  }
 
   @media screen and (max-width: 940px) {
    
@@ -831,7 +846,7 @@ z-index: 0;
   position: relative;
   /* margin-top: 78px; */
   margin-top: 80px;
-  background-image: url(../public/FFC-Banner-WEB-2.jpeg);
+  background-image: url(../public/Images_final/banner1.avif);
   background-size: contain;
   /* background-size: 1370px 641px; */
   /* background-size: 1000px 90vh; */
@@ -910,6 +925,8 @@ z-index: 0;
   height: auto;
   justify-content: center;
   gap: 30px;
+  width: auto;
+  margin: 50px;
 }
 
 .donateButton{

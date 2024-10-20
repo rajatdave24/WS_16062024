@@ -37,28 +37,36 @@ const image = {
 export const Gallery = () => {
   const images = [
     { 
-      original: "pic1.jpg",
-      thumbnail: "pic1.jpg"
+      original: "./Images_final/slider1.avif",
+      thumbnail: "./Images_final/slider1.avif"
     },
     {
-      original: "pic2.jpg",
-      thumbnail: "pic2.jpg"
+      original: "./Images_final/slider2.avif",
+      thumbnail: "./Images_final/slider2.avif"
     },
     {
-      original: "pic3.jpg",
-      thumbnail: "pic3.jpg"
+      original: "./Images_final/slider3.avif",
+      thumbnail: "./Images_final/slider3.avif"
     },
     {
-      original: "pic4.jpg",
-      thumbnail: "pic4.jpg"
+      original: "./Images_final/slider4.avif",
+      thumbnail: "./Images_final/slider4.avif"
     },
     {
-      original: "pic5.jpg",
-      thumbnail: "pic5.jpg"
+      original: "./Images_final/slider5.avif",
+      thumbnail: "./Images_final/slider5.avif"
     },
     {
-      original: "pic6.jpg",
-      thumbnail: "pic6.jpg"
+      original: "./Images_final/slider6.avif",
+      thumbnail: "./Images_final/slider6.avif"
+    },
+    {
+        original: "./Images_final/slider7.avif",
+        thumbnail: "./Images_final/slider7.avif"
+    },
+    {
+        original: "./Images_final/slider8.avif",
+        thumbnail: "./Images_final/slider8.avif"
     }
   ];
 
@@ -84,3 +92,5 @@ export const Gallery = () => {
     </div>
   );
 };
+
+export default Gallery;
