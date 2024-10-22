@@ -30,6 +30,7 @@ export const FFC = () => {
     const [num, setNum] = useState(null);
     const [open, setOpen] = useState(false);
     const [amount, setAmount] = useState(0);
+    const [submit, setSubmit] = useState(false);
     const donateRef = useRef(null);
     const inforef = useRef();
     const payRef = useRef();
@@ -82,11 +83,56 @@ export const FFC = () => {
 
         console.log(payRef.current.value);
         setOpen(true);
-        if((name === null) || (email === null)){
-            return alert('Please enter vlid detalis!');
-
-        }
        
+        const promise1 = new Promise((resolve, reject)=>{
+            if(name && email && num)
+                resolve(alert('resolved'));
+            else
+                reject(alert('rejected'));
+        });
+
+        await promise1.then(()=>{
+        
+        const response = axios.get("https://iskconjuhu.in/donate.php", {
+            params: {
+              key: "",
+              txnid: TxnId,
+              amount: amount,
+              productinfo: 'test pay',
+              firstname: name,
+              email: email,
+              phone: num,
+              surl: "https://iskconjuhu.in/",
+              furl: "http://localhost:3000/",
+              salt: "",
+              pg: "UPI",
+            },
+          });
+             
+
+          
+          const htmlContent = response.data;
+          console.log('htmlcontent',response,htmlContent);
+          const newWindow = window.open();
+          newWindow.document.open();
+          newWindow.document.write(htmlContent);
+          newWindow.document.close();
+          window.close();
+
+        }).catch((err)=>console.error(err));
+
+        //   setEmail(null);
+        //   setName(null);
+        //   setNum(null);
+
+    }
+
+
+    const submitForm = async () => {
+        const TxnId =
+        "ISKCON-JUHU-" +
+        Date.now().toString() +
+        Math.random().toString(36).substring(2, 15);
         const response = await axios.get("https://iskconjuhu.in/donate.php", {
             params: {
               key: "",
@@ -102,9 +148,6 @@ export const FFC = () => {
               pg: "UPI",
             },
           });
-
-
-          
           const htmlContent = response.data;
           console.log('htmlcontent',response,htmlContent);
           const newWindow = window.open();
@@ -112,11 +155,9 @@ export const FFC = () => {
           newWindow.document.write(htmlContent);
           newWindow.document.close();
           window.close();
-
           setEmail(null);
           setName(null);
           setNum(null);
-
     }
 
     return (
@@ -206,7 +247,7 @@ export const FFC = () => {
                     </div>
                 </div>
                 {open && 
-                <Modal setName={setName} setEmail={setEmail} setNum={setName} setOpen={setOpen} handlePay={handlePay}/>
+                <Modal setName={setName} setEmail={setEmail} setNum={setNum} setOpen={setOpen} handlePay={handlePay} submitForm={submitForm}/>
                 }
                 <div className='donationBox'>
                     <div className="donationList">
