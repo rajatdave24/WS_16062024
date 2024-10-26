@@ -1,13 +1,11 @@
 import React,{useEffect} from 'react';
 import {Link} from 'react-router-dom';
-import NavBar from '../NavBar';
-import { Nav } from 'react-bootstrap';
 
 
 const Failure = () => {
 
     useEffect(()=>{
-        setTimeout(()=>location.href='http://localhost:3000/',5000)
+        setTimeout(()=>location.href='https://iskconjuhu.in/',5000)
     },[]);
 
     return(

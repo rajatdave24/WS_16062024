@@ -98,19 +98,17 @@ export const FFC = () => {
               key: "",
               txnid: TxnId,
               amount: amount,
-              productinfo: 'test pay',
+              productinfo: 'Donation for Iskcon Juhu',
               firstname: name,
               email: email,
               phone: num,
-              surl: "https://iskconjuhu.in/",
-              furl: "http://localhost:3000/",
+              surl: "https://iskconjuhu.in/success",
+              furl: "https://iskconjuju.in/failure",
               salt: "",
               pg: "UPI",
             },
           });
              
-
-          
           const htmlContent = response.data;
           console.log('htmlcontent',response,htmlContent);
           const newWindow = window.open();
@@ -138,12 +136,12 @@ export const FFC = () => {
               key: "",
               txnid: TxnId,
               amount: amount,
-              productinfo: 'test pay',
+              productinfo: 'Donation for Iskcon Juhu',
               firstname: name,
               email: email,
               phone: num,
-              surl: "https://iskconjuhu.in/",
-              furl: "http://localhost:3000/",
+              surl: "https://iskconjuhu.in/success",
+              furl: "https://iskconjuhu.in/failure",
               salt: "",
               pg: "UPI",
             },

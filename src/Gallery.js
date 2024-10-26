@@ -37,36 +37,36 @@ const image = {
 export const Gallery = () => {
   const images = [
     { 
-      original: "./Images_final/slider1.avif",
-      thumbnail: "./Images_final/slider1.avif"
+      original: "./Images_final/slider1.jpg",
+      thumbnail: "./Images_final/slider1.jpg"
     },
     {
-      original: "./Images_final/slider2.avif",
-      thumbnail: "./Images_final/slider2.avif"
+      original: "./Images_final/slider2.jpg",
+      thumbnail: "./Images_final/slider2.jpg"
     },
     {
-      original: "./Images_final/slider3.avif",
-      thumbnail: "./Images_final/slider3.avif"
+      original: "./Images_final/slider3.jpg",
+      thumbnail: "./Images_final/slider3.jpg"
     },
     {
-      original: "./Images_final/slider4.avif",
-      thumbnail: "./Images_final/slider4.avif"
+      original: "./Images_final/slider4.jpg",
+      thumbnail: "./Images_final/slider4.jpg"
     },
     {
-      original: "./Images_final/slider5.avif",
-      thumbnail: "./Images_final/slider5.avif"
+      original: "./Images_final/slider5.jpg",
+      thumbnail: "./Images_final/slider5.jpg"
     },
     {
-      original: "./Images_final/slider6.avif",
-      thumbnail: "./Images_final/slider6.avif"
+      original: "./Images_final/slider6.jpg",
+      thumbnail: "./Images_final/slider6.jpg"
     },
     {
-        original: "./Images_final/slider7.avif",
-        thumbnail: "./Images_final/slider7.avif"
+        original: "./Images_final/slider7.jpg",
+        thumbnail: "./Images_final/slider7.jpg"
     },
     {
-        original: "./Images_final/slider8.avif",
-        thumbnail: "./Images_final/slider8.avif"
+        original: "./Images_final/slider8.jpg",
+        thumbnail: "./Images_final/slider8.jpg"
     }
   ];
 

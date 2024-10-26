@@ -7,7 +7,7 @@ const Video =({src}) => {
         justifySelf:'centre',
         alignItems:'centre',
         height:'30vh',
-        width: '30vw'
+        width: '75vw'
     }
 
     return(
@@ -15,8 +15,8 @@ const Video =({src}) => {
         <iframe
         allowFullScreen
         frameborder="0"
-        height="80%"
-        width='85%'
+        height="30vh"
+        width='75vw'
         style={style}
         src={src}
       />

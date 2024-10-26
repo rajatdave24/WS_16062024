@@ -7,7 +7,7 @@ import { Nav } from 'react-bootstrap';
 const Success = () => {
 
     useEffect(()=>{
-        setTimeout(()=>location.href='http://localhost:3000/',5000)
+        setTimeout(()=>location.href='https://iskconjuhu.in/',5000)
     },[]);
 
     return(

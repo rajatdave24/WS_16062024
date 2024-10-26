@@ -31,7 +31,7 @@ font-size: 1.5rem;
   position: relative;
   margin-top: 78px;
   /* background-image: url(../public/FFC-Banner-WEB-1_11zon.jpeg); */
-  background-image: url(../public/Images_final/banner.avif);
+  background-image: url(https://iskconjuhu.in/Images_final/banner.jpg);
   background-size: cover;
   background-size: 100vw 100vh;
   background-repeat: no-repeat;
@@ -846,7 +846,7 @@ z-index: 0;
   position: relative;
   /* margin-top: 78px; */
   margin-top: 80px;
-  background-image: url(../public/Images_final/banner1.avif);
+  background-image: url('https://iskconjuhu.in/Images_final/banner1.jpg');
   background-size: contain;
   /* background-size: 1370px 641px; */
   /* background-size: 1000px 90vh; */
